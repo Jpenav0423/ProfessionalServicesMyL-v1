@@ -1,0 +1,30 @@
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.exe.config
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.exe
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.pdb
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.AssemblyReference.cache
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form1.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form2.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form3.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form4.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Properties.Resources.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.GenerateResource.cache
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.exe
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.pdb
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form10.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form11.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form12.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form5.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form6.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form7.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form8.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form9.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form13.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form14.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form15.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form16.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form17.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form18.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form19.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form20.resources
+C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form21.resources
