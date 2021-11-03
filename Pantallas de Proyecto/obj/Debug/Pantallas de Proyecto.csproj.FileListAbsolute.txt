@@ -59,3 +59,34 @@ C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.exe
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.pdb
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmMenuBasesExternas.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.exe.config
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.exe
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.pdb
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.AssemblyReference.cache
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmInicio.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmMenuBasesExternas.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNombreCliente.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListaEmpresas.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmTipoReporte.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNombreEmpresa.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmBusquedaDeudor.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmCaracterizacion.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmGestionesDia.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListasUsuarios.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmEditarUsuario.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNuevaEmpresa.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmMenu.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmModArregloPago.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListaEmpresasADMIN.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmGestiones.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmSeguroSeguimiento.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmClienteGenral.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNuevaGestion.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmEditarCliente.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmSelecionTipoReportes.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmReportes.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Properties.Resources.resources
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.GenerateResource.cache
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.CoreCompileInputs.cache
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.exe
+C:\repos-git\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.pdb

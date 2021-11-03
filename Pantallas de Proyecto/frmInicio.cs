@@ -26,12 +26,16 @@ namespace Pantallas_de_Proyecto
         {
             
         }
-
+        clsConexion conexion = new clsConexion();
+        superClase inicio = new superClase();
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            frmMenu frm2 = new frmMenu();
-            frm2.Show();
-            this.Hide();
+            conexion.logear(this.txtUsuario.Text, this.txtPassword.Text);
+
+            if(inicio.InicioExitoso == 1)
+            {
+                this.Hide();
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
