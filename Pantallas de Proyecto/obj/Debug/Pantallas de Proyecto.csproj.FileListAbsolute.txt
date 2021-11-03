@@ -28,3 +28,34 @@ C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\P
 C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form19.resources
 C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form20.resources
 C:\Users\Home\Documents\III PERIODO 2021\DESARROLLO DE SOFTWARE\Proyecto M & L\Pantallas\Pantallas de Proyecto\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Form21.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.exe.config
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.exe
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\bin\Debug\Pantallas de Proyecto.pdb
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.AssemblyReference.cache
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmInicio.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNombreCliente.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListaEmpresas.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmTipoReporte.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNombreEmpresa.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmBusquedaDeudor.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmCaracterizacion.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmGestionesDia.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListasUsuarios.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmEditarUsuario.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNuevaEmpresa.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmMenu.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmModArregloPago.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListaEmpresasADMIN.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmGestiones.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmSeguroSeguimiento.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmClienteGenral.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNuevaGestion.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmEditarCliente.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmSelecionTipoReportes.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmReportes.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.Properties.Resources.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.GenerateResource.cache
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.exe
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.pdb
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmMenuBasesExternas.resources

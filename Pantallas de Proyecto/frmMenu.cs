@@ -26,8 +26,8 @@ namespace Pantallas_de_Proyecto
 
         private void btnGestiones_Click(object sender, EventArgs e)
         {
-            frmGestiones frm3 = new frmGestiones();
-            frm3.Show();
+            frmGestionesDia frmGestionDia = new frmGestionesDia();
+            frmGestionDia.Show();
             this.Hide();
 
         }
@@ -42,8 +42,8 @@ namespace Pantallas_de_Proyecto
 
         private void btnBasesExternas_Click(object sender, EventArgs e)
         {
-            frmListaEmpresas frm11 = new frmListaEmpresas();
-            frm11.Show();
+            frmMenuBasesExternas frmMBS = new frmMenuBasesExternas();
+            frmMBS.Show();
             this.Hide();
         }
 

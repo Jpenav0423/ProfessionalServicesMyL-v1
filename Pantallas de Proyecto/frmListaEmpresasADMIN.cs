@@ -16,5 +16,12 @@ namespace Pantallas_de_Proyecto
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            frmMenuBasesExternas frmMBE = new frmMenuBasesExternas();
+            frmMBE.Show();
+            this.Hide();
+        }
     }
 }

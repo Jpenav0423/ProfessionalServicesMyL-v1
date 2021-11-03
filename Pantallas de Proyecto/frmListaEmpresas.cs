@@ -33,8 +33,8 @@ namespace Pantallas_de_Proyecto
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmMenu frm2 = new frmMenu();
-            frm2.Show();
+            frmMenuBasesExternas frmMBE= new frmMenuBasesExternas();
+            frmMBE.Show();
             this.Close();
 
         }

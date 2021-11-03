@@ -19,8 +19,8 @@ namespace Pantallas_de_Proyecto
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            frmMenu frm2 = new frmMenu();
-            frm2.Show();
+            frmMenuBasesExternas frmMBS = new frmMenuBasesExternas();
+            frmMBS.Show();
             this.Close();
         }
 

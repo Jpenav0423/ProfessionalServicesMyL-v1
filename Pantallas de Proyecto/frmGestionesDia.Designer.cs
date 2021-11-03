@@ -45,6 +45,7 @@ namespace Pantallas_de_Proyecto
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -146,6 +147,7 @@ namespace Pantallas_de_Proyecto
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.btnCancelar);
             this.groupBox3.Controls.Add(this.btnBuscar);
@@ -174,6 +176,7 @@ namespace Pantallas_de_Proyecto
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnBuscar
             // 
@@ -195,7 +198,18 @@ namespace Pantallas_de_Proyecto
             this.label6.TabIndex = 121;
             this.label6.Text = "Buscar Gestiones del Dia";
             // 
-            // Form16
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Location = new System.Drawing.Point(55, 342);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 104);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Iniciar Gestion";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // frmGestionesDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,7 +221,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form16";
+            this.Name = "frmGestionesDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Gestiones del Dia ";
             this.Load += new System.EventHandler(this.Form16_Load);
@@ -237,5 +251,6 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
