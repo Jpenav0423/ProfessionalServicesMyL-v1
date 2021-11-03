@@ -60,5 +60,11 @@ namespace Pantallas_de_Proyecto
             frm17.Show();
             this.Close();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }

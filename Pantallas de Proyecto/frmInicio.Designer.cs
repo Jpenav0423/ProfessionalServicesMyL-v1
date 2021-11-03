@@ -163,12 +163,12 @@ namespace Pantallas_de_Proyecto
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFecha.Location = new System.Drawing.Point(21, 131);
+            this.lblFecha.Location = new System.Drawing.Point(8, 128);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(56, 18);
+            this.lblFecha.Size = new System.Drawing.Size(53, 17);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha";
             // 
@@ -200,7 +200,7 @@ namespace Pantallas_de_Proyecto
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -209,7 +209,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla de Inicio";
             this.Load += new System.EventHandler(this.Form1_Load);

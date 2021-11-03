@@ -183,14 +183,19 @@ namespace Pantallas_de_Proyecto
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(881, 700);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(138, 36);
+            this.lblFecha.Size = new System.Drawing.Size(94, 25);
             this.lblFecha.TabIndex = 9;
             this.lblFecha.Text = "FECHA:";
             // 
-            // Form2
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,7 +211,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.btnBasesExternas);
             this.Controls.Add(this.btnOpciones);
             this.Controls.Add(this.btnGestiones);
-            this.Name = "Form2";
+            this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal ";
             this.groupBox1.ResumeLayout(false);
