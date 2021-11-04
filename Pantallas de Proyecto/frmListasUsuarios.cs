@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_de_Proyecto
 {
@@ -26,8 +27,8 @@ namespace Pantallas_de_Proyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmNombreEmpresa frm13 = new frmNombreEmpresa();
-            frm13.Show();
+            frmEditarUsuario frmEU = new frmEditarUsuario();
+            frmEU.Show();
             this.Hide();
         }
 

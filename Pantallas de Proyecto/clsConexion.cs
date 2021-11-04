@@ -42,6 +42,7 @@ namespace Pantallas_de_Proyecto
             sc.Close();
         }
 
+        /*
         public void logear(string usuario, string contrasena)
         {
             try
@@ -95,8 +96,12 @@ namespace Pantallas_de_Proyecto
             }
         }
 
+        
+
 
         //funcionesCargarOtrosDatos
+        */
+
 
     }
 }

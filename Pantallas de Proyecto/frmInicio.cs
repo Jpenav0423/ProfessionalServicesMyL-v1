@@ -30,12 +30,19 @@ namespace Pantallas_de_Proyecto
         superClase inicio = new superClase();
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            /*
             conexion.logear(this.txtUsuario.Text, this.txtPassword.Text);
 
             if(inicio.InicioExitoso == 1)
             {
                 this.Hide();
             }
+            */
+
+           // frmInicio login = new frmInicio();
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
