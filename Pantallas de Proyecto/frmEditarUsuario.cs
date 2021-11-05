@@ -25,24 +25,25 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                if (txtCodEmpleado.Text == " " || txtUsuario.Text == " " || txtContraseña.Text == " " || txtConfirmarCntrña.Text == " ")
-                {
-                    MessageBox.Show("No se pueden insertar Datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    cmd = new SqlCommand("INSERT INTO Usuario (cod_empleado, nivel, usuario, contra VALUES (" + txtCodEmpleado.Text + " , '" + cmbNivelUser.Text + "' , '" + txtNombreGestor.Text + "' , '" + txtContraseña.Text + "' , '" + txtConfirmarCntrña.Text + "')", conexion.sc);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Se han ingresado los datos con Exito ", "INFROMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conexion.CargarDatosUsuarios(dgvListaUsuarios);
-                }
+                cmd = new SqlCommand("UPDATE Usuario SET ( cod_empleado = '" + txtCodEmpleado.Text + "', nivel = '" + cmbNivelUser.Text + "' , usuario = '" + txtUsuario.Text + "' , nombre = '" + txtNombreGestor.Text + "' , contra = '" + txtContraseña.Text + "' , areaTrabajo = '" + cmbAreaTrabajo.Text + "' )", conexion.sc);
+            } 
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-            
         }
 
         private void btnCancelarYSalir_Click(object sender, EventArgs e)
         {
-            
+            frmListasUsuarios frmLU = new frmListasUsuarios();
+            frmLU.Show();
+            this.Hide();
+        }
+
+        private void frmEditarUsuario_Load(object sender, EventArgs e)
+        {
+            conexion.abrir();
+            conexion.CargarDatosUsuarios(dgvListaUsuarios);
         }
     }
 }
