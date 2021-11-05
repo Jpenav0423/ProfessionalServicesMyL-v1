@@ -102,6 +102,25 @@ namespace Pantallas_de_Proyecto
         //funcionesCargarOtrosDatos
         */
 
+        public void CargarDatosUsuarios(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM Usuario", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+
+        public void CargarDatosGestiones()
+        {
+
+        }
     }
 }
