@@ -34,7 +34,7 @@ namespace Pantallas_de_Proyecto
                     cmd = new SqlCommand("INSERT INTO Usuario (cod_empleado, nivel, usuario, contra VALUES (" + txtCodEmpleado.Text + " , '" + cmbNivelUser.Text + "' , '" + txtNombreGestor.Text + "' , '" + txtContraseña.Text + "' , '" + txtConfirmarCntrña.Text + "')", conexion.sc);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Se han ingresado los datos con Exito ", "INFROMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conexion.CargarDatosUsuarios(dgcListaUsuarios);
+                    conexion.CargarDatosUsuarios(dgvListaUsuarios);
                 }
             }
             
