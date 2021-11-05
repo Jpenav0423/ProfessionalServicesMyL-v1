@@ -49,9 +49,10 @@ namespace Pantallas_de_Proyecto
             this.label8 = new System.Windows.Forms.Label();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,7 +112,7 @@ namespace Pantallas_de_Proyecto
             // txtCodEmpleado
             // 
             this.txtCodEmpleado.Location = new System.Drawing.Point(315, 54);
-            this.txtCodEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodEmpleado.Name = "txtCodEmpleado";
             this.txtCodEmpleado.Size = new System.Drawing.Size(76, 20);
             this.txtCodEmpleado.TabIndex = 5;
@@ -119,7 +120,7 @@ namespace Pantallas_de_Proyecto
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(464, 54);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(127, 20);
             this.txtUsuario.TabIndex = 6;
@@ -127,7 +128,7 @@ namespace Pantallas_de_Proyecto
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(386, 205);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(139, 20);
             this.txtContraseña.TabIndex = 7;
@@ -136,7 +137,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.cmbAreaTrabajo.FormattingEnabled = true;
             this.cmbAreaTrabajo.Location = new System.Drawing.Point(386, 164);
-            this.cmbAreaTrabajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAreaTrabajo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
             this.cmbAreaTrabajo.Size = new System.Drawing.Size(355, 21);
             this.cmbAreaTrabajo.TabIndex = 9;
@@ -149,7 +150,7 @@ namespace Pantallas_de_Proyecto
             "Supervisor",
             "Gestor"});
             this.cmbNivelUser.Location = new System.Drawing.Point(386, 127);
-            this.cmbNivelUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbNivelUser.Margin = new System.Windows.Forms.Padding(2);
             this.cmbNivelUser.Name = "cmbNivelUser";
             this.cmbNivelUser.Size = new System.Drawing.Size(355, 21);
             this.cmbNivelUser.TabIndex = 10;
@@ -167,7 +168,7 @@ namespace Pantallas_de_Proyecto
             // txtNombreGestor
             // 
             this.txtNombreGestor.Location = new System.Drawing.Point(386, 92);
-            this.txtNombreGestor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreGestor.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreGestor.Name = "txtNombreGestor";
             this.txtNombreGestor.Size = new System.Drawing.Size(355, 20);
             this.txtNombreGestor.TabIndex = 12;
@@ -185,7 +186,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGuardar.Location = new System.Drawing.Point(37, 153);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(110, 84);
             this.btnGuardar.TabIndex = 14;
@@ -197,7 +198,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnCancelarYSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelarYSalir.Location = new System.Drawing.Point(37, 581);
-            this.btnCancelarYSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarYSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarYSalir.Name = "btnCancelarYSalir";
             this.btnCancelarYSalir.Size = new System.Drawing.Size(110, 84);
             this.btnCancelarYSalir.TabIndex = 15;
@@ -212,9 +213,9 @@ namespace Pantallas_de_Proyecto
             this.groupBox3.Controls.Add(this.btnCancelarYSalir);
             this.groupBox3.Controls.Add(this.btnGuardar);
             this.groupBox3.Location = new System.Drawing.Point(2, 1);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(196, 722);
             this.groupBox3.TabIndex = 122;
             this.groupBox3.TabStop = false;
@@ -223,7 +224,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
             this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -246,12 +247,13 @@ namespace Pantallas_de_Proyecto
             this.dgvListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column4,
+            this.nombre,
             this.Column2,
             this.Column3,
+            this.Column4,
             this.Column5});
             this.dgvListaUsuarios.Location = new System.Drawing.Point(214, 259);
-            this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaUsuarios.Name = "dgvListaUsuarios";
             this.dgvListaUsuarios.RowHeadersWidth = 51;
             this.dgvListaUsuarios.RowTemplate.Height = 24;
@@ -265,12 +267,10 @@ namespace Pantallas_de_Proyecto
             this.Column1.Name = "Column1";
             this.Column1.Width = 150;
             // 
-            // Column4
+            // nombre
             // 
-            this.Column4.HeaderText = "Nivel";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
             // 
             // Column2
             // 
@@ -286,9 +286,16 @@ namespace Pantallas_de_Proyecto
             this.Column3.Name = "Column3";
             this.Column3.Width = 300;
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Nivel";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
             // Column5
             // 
-            this.Column5.HeaderText = "Estado";
+            this.Column5.HeaderText = "Area de Trabajo";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 150;
@@ -315,7 +322,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Usuario";
@@ -350,9 +357,10 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvListaUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

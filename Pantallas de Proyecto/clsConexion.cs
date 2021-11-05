@@ -120,7 +120,94 @@ namespace Pantallas_de_Proyecto
 
         public void CargarDatosGestiones()
         {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM deudores", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                IDataReader read;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+
+            }
+        }
+
+        public void cargarDatosListaEmpresas(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM empresas", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+        }
+        
+
+        public void cargarDatosSeguimientos(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM seguimientos", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+        }
+
+        public void cargarDatosSeguro()
+        {
+            //Incompleta
+        }
+
+        public void cargarDatosGestionesDelDia(DataGridView dgv)
+        {
+            try
+            {
+                //da = new SqlDataAdapter();
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
 
         }
+
+        public void mostrarCaracterizaciones(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM clientes", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+        
+
+
+
+
+
+        
+        
     }
 }
