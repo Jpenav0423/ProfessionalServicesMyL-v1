@@ -25,7 +25,9 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                cmd = new SqlCommand("UPDATE Usuario SET ( cod_empleado = '" + txtCodEmpleado.Text + "', nivel = '" + cmbNivelUser.Text + "' , usuario = '" + txtUsuario.Text + "' , nombre = '" + txtNombreGestor.Text + "' , contra = '" + txtContraseña.Text + "' , areaTrabajo = '" + cmbAreaTrabajo.Text + "' )", conexion.sc);
+                cmd = new SqlCommand("UPDATE Usuario SET ( cod_empleado = '" + txtCodEmpleado.Text + "', nivel = '" + cmbNivelUser.Text + "' , usuario = '" + txtUsuario.Text + "' ,  contra = '" + txtContraseña.Text + "' , estado = '" + txtEstado.Text + "' )", conexion.sc);
+                cmd.ExecuteNonQuery();
+                conexion.CargarDatosUsuarios(dgvListaUsuarios);
             } 
             catch(Exception ex)
             {

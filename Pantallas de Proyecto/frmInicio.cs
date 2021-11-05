@@ -19,7 +19,7 @@ namespace Pantallas_de_Proyecto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,19 +30,19 @@ namespace Pantallas_de_Proyecto
         superClase inicio = new superClase();
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            /*
+            
             conexion.logear(this.txtUsuario.Text, this.txtPassword.Text);
 
             if(inicio.InicioExitoso == 1)
             {
                 this.Hide();
             }
-            */
+            
 
            // frmInicio login = new frmInicio();
-            frmMenu menu = new frmMenu();
-            menu.Show();
-            this.Hide();
+            //frmMenu menu = new frmMenu();
+           // menu.Show();
+            //this.Hide();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

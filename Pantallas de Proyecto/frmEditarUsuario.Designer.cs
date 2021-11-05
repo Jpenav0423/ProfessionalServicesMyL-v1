@@ -33,11 +33,10 @@ namespace Pantallas_de_Proyecto
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.estado = new System.Windows.Forms.Label();
             this.txtCodEmpleado = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.cmbAreaTrabajo = new System.Windows.Forms.ComboBox();
             this.cmbNivelUser = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreGestor = new System.Windows.Forms.TextBox();
@@ -48,12 +47,7 @@ namespace Pantallas_de_Proyecto
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
@@ -99,15 +93,15 @@ namespace Pantallas_de_Proyecto
             this.label4.TabIndex = 3;
             this.label4.Text = "Nombre del Gestor:";
             // 
-            // label5
+            // estado
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(270, 172);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Area de Trabajo";
+            this.estado.AutoSize = true;
+            this.estado.Location = new System.Drawing.Point(272, 165);
+            this.estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.estado.Name = "estado";
+            this.estado.Size = new System.Drawing.Size(40, 13);
+            this.estado.TabIndex = 4;
+            this.estado.Text = "Estado";
             // 
             // txtCodEmpleado
             // 
@@ -133,22 +127,13 @@ namespace Pantallas_de_Proyecto
             this.txtContraseña.Size = new System.Drawing.Size(139, 20);
             this.txtContraseña.TabIndex = 7;
             // 
-            // cmbAreaTrabajo
-            // 
-            this.cmbAreaTrabajo.FormattingEnabled = true;
-            this.cmbAreaTrabajo.Location = new System.Drawing.Point(386, 164);
-            this.cmbAreaTrabajo.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbAreaTrabajo.Name = "cmbAreaTrabajo";
-            this.cmbAreaTrabajo.Size = new System.Drawing.Size(355, 21);
-            this.cmbAreaTrabajo.TabIndex = 9;
-            // 
             // cmbNivelUser
             // 
             this.cmbNivelUser.FormattingEnabled = true;
             this.cmbNivelUser.Items.AddRange(new object[] {
-            "Administrador",
-            "Supervisor",
-            "Gestor"});
+            "admin",
+            "superv",
+            "gestor"});
             this.cmbNivelUser.Location = new System.Drawing.Point(386, 127);
             this.cmbNivelUser.Margin = new System.Windows.Forms.Padding(2);
             this.cmbNivelUser.Name = "cmbNivelUser";
@@ -158,7 +143,7 @@ namespace Pantallas_de_Proyecto
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(269, 210);
+            this.label6.Location = new System.Drawing.Point(269, 205);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 13);
@@ -245,13 +230,6 @@ namespace Pantallas_de_Proyecto
             // dgvListaUsuarios
             // 
             this.dgvListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.nombre,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.dgvListaUsuarios.Location = new System.Drawing.Point(214, 259);
             this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaUsuarios.Name = "dgvListaUsuarios";
@@ -260,45 +238,13 @@ namespace Pantallas_de_Proyecto
             this.dgvListaUsuarios.Size = new System.Drawing.Size(644, 271);
             this.dgvListaUsuarios.TabIndex = 124;
             // 
-            // Column1
+            // txtEstado
             // 
-            this.Column1.HeaderText = "Cod_empleado";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Usuarios";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Contraseña";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 300;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Nivel";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Area de Trabajo";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
+            this.txtEstado.Location = new System.Drawing.Point(386, 165);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(355, 20);
+            this.txtEstado.TabIndex = 125;
             // 
             // frmEditarUsuario
             // 
@@ -306,6 +252,7 @@ namespace Pantallas_de_Proyecto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(885, 857);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.dgvListaUsuarios);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox3);
@@ -313,11 +260,10 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.txtNombreGestor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbNivelUser);
-            this.Controls.Add(this.cmbAreaTrabajo);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtCodEmpleado);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.estado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -341,11 +287,10 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label estado;
         private System.Windows.Forms.TextBox txtCodEmpleado;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.ComboBox cmbAreaTrabajo;
         private System.Windows.Forms.ComboBox cmbNivelUser;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombreGestor;
@@ -356,11 +301,6 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvListaUsuarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox txtEstado;
     }
 }

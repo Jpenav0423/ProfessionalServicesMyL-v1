@@ -18,6 +18,9 @@ namespace Pantallas_de_Proyecto
             InitializeComponent();
         }
 
+        clsConexion conexion = new clsConexion();
+        SqlCommand cmd;
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             frmMenuBasesExternas frmMBS = new frmMenuBasesExternas();
@@ -37,6 +40,17 @@ namespace Pantallas_de_Proyecto
             frmEditarUsuario frm18 = new frmEditarUsuario();
             frm18.Show();
             this.Close();
+        }
+
+        private void frmListasUsuarios_Load(object sender, EventArgs e)
+        {
+            conexion.abrir();
+            conexion.CargarDatosUsuarios(dgvListaUsuarios);
+        }
+
+        private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

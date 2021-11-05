@@ -42,15 +42,15 @@ namespace Pantallas_de_Proyecto
             sc.Close();
         }
 
-        /*
-        public void logear(string usuario, string contrasena)
+        
+        public void logear(string usuario, string contra)
         {
             try
             {
                 sc.Open();
-                SqlCommand cmd = new SqlCommand("SELECT tipo_usuario FROM Usuarios WHERE usuario = @usuario AND contrasena = @contrasena", sc);
+                SqlCommand cmd = new SqlCommand("SELECT nivel FROM Usuario WHERE usuario = @usuario AND contra = @contra", sc);
                 cmd.Parameters.AddWithValue("usuario", usuario);
-                cmd.Parameters.AddWithValue("contrasena", contrasena);
+                cmd.Parameters.AddWithValue("contra", contra);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -62,7 +62,7 @@ namespace Pantallas_de_Proyecto
                     frmMenu menu = new frmMenu();
                     inicio.InicioExitoso = 0;
 
-                    if (dt.Rows[0][0].ToString() == "Administrador")
+                    if (dt.Rows[0][0].ToString() == "admin")
                     {
                         MessageBox.Show("Se ha abierto usuario de administrador");
                         inicio.Administrador = 1;
@@ -71,12 +71,22 @@ namespace Pantallas_de_Proyecto
                     }
                     else
                     {
-                        if (dt.Rows[0][0].ToString() == "Gestor")
+                        if (dt.Rows[0][0].ToString() == "gestor")
                         {
                             MessageBox.Show("Se ha abierto usuario de Gestor");
                             inicio.Gestor = 0;
                             inicio.InicioExitoso = 1;
                             menu.Show();
+                        }
+                        else
+                        {
+                            if(dt.Rows[0][0].ToString() == "superv")
+                            {
+                                MessageBox.Show("Se ha abierto usuario de supervisor");
+                                inicio.Supervisor = 0;
+                                inicio.InicioExitoso = 1;
+                                menu.Show();
+                            }
                         }
                     }
                 }
@@ -96,11 +106,7 @@ namespace Pantallas_de_Proyecto
             }
         }
 
-        
 
-
-        //funcionesCargarOtrosDatos
-        */
 
         public void CargarDatosUsuarios(DataGridView dgv)
         {
@@ -200,6 +206,7 @@ namespace Pantallas_de_Proyecto
             {
 
             }
+
         }
         
 
