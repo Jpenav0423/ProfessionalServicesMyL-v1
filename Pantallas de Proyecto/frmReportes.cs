@@ -32,5 +32,10 @@ namespace Pantallas_de_Proyecto
             frm2.Show();
             this.Hide();
         }
+
+        private void frmReportes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
