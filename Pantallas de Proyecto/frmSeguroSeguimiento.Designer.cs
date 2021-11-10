@@ -29,13 +29,6 @@ namespace Pantallas_de_Proyecto
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -60,23 +53,15 @@ namespace Pantallas_de_Proyecto
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSeguimientos = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleadoFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(141, 89);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(296, 20);
             this.textBox5.TabIndex = 20;
@@ -95,7 +80,7 @@ namespace Pantallas_de_Proyecto
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(141, 124);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(296, 20);
             this.textBox3.TabIndex = 18;
@@ -113,7 +98,7 @@ namespace Pantallas_de_Proyecto
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(552, 176);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(112, 20);
             this.textBox8.TabIndex = 26;
@@ -131,7 +116,7 @@ namespace Pantallas_de_Proyecto
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(552, 207);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(112, 20);
             this.textBox7.TabIndex = 24;
@@ -149,7 +134,7 @@ namespace Pantallas_de_Proyecto
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(141, 176);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(296, 20);
             this.textBox11.TabIndex = 34;
@@ -167,7 +152,7 @@ namespace Pantallas_de_Proyecto
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(141, 209);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(296, 20);
             this.textBox10.TabIndex = 32;
@@ -185,7 +170,7 @@ namespace Pantallas_de_Proyecto
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(141, 151);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(296, 20);
             this.textBox9.TabIndex = 30;
@@ -213,7 +198,7 @@ namespace Pantallas_de_Proyecto
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(717, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(31, 20);
             this.textBox1.TabIndex = 36;
@@ -231,7 +216,7 @@ namespace Pantallas_de_Proyecto
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(826, 84);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(50, 20);
             this.textBox2.TabIndex = 38;
@@ -239,7 +224,7 @@ namespace Pantallas_de_Proyecto
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(569, 87);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(95, 20);
             this.textBox4.TabIndex = 39;
@@ -257,7 +242,7 @@ namespace Pantallas_de_Proyecto
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(157, 245);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(280, 20);
             this.textBox6.TabIndex = 41;
@@ -287,7 +272,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCerrar.Location = new System.Drawing.Point(740, 589);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(122, 55);
             this.btnCerrar.TabIndex = 46;
@@ -295,25 +280,16 @@ namespace Pantallas_de_Proyecto
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // dataGridView1
+            // dgvSeguimientos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Fecha,
-            this.Column1,
-            this.empleadoFinal,
-            this.Column2,
-            this.Column6,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 313);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(841, 255);
-            this.dataGridView1.TabIndex = 47;
+            this.dgvSeguimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSeguimientos.Location = new System.Drawing.Point(21, 313);
+            this.dgvSeguimientos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSeguimientos.Name = "dgvSeguimientos";
+            this.dgvSeguimientos.RowHeadersWidth = 51;
+            this.dgvSeguimientos.RowTemplate.Height = 24;
+            this.dgvSeguimientos.Size = new System.Drawing.Size(841, 255);
+            this.dgvSeguimientos.TabIndex = 47;
             // 
             // label13
             // 
@@ -326,77 +302,6 @@ namespace Pantallas_de_Proyecto
             this.label13.TabIndex = 48;
             this.label13.Text = "Seguimientos";
             // 
-            // Column3
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column3.HeaderText = "FECHA DE SEGUIMIENTO";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Fecha
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Fecha.HeaderText = "FECHA";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "GESTOR";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // empleadoFinal
-            // 
-            this.empleadoFinal.HeaderText = "Gestor Final";
-            this.empleadoFinal.Name = "empleadoFinal";
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "GESTION";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column6
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column6.HeaderText = "OBSERVACIONES";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 350;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column4.HeaderText = "PROMESA";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column5.HeaderText = "DESCUENTO";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
             // frmSeguroSeguimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +309,7 @@ namespace Pantallas_de_Proyecto
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(885, 857);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSeguimientos);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -429,11 +334,12 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSeguroSeguimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seguro Social y Seguimientos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmSeguroSeguimiento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimientos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,15 +371,7 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSeguimientos;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn empleadoFinal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

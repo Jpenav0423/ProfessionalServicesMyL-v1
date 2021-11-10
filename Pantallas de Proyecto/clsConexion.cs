@@ -161,7 +161,8 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                da = new SqlDataAdapter("SELECT * FROM seguimientos", sc);
+                da = new SqlDataAdapter("SELECT se.fecha, ge.fecha_final, se.cod_gestion,se.descripcion, ge.cod_empleado, se.cod_empleado_f " +
+                    "FROM gestiones ge JOIN Seguimiento se ON se.cod_gestion=ge.cod_gestion  WHERE ge.cod_deudor = 1",sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -177,21 +178,7 @@ namespace Pantallas_de_Proyecto
             //Incompleta
         }
 
-        public void cargarDatosGestionesDelDia(DataGridView dgv)
-        {
-            try
-            {
-                //da = new SqlDataAdapter();
-                dt = new DataTable();
-                da.Fill(dt);
-                dgv.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
-            }
 
-        }
 
         public void mostrarCaracterizaciones(DataGridView dgv)
         {
@@ -204,12 +191,42 @@ namespace Pantallas_de_Proyecto
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
             }
 
         }
-        
 
+        public void mostrarDatosGestionesDia(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id, fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento" +
+                    " FROM Deudores", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+        }
+        
+        public void cargarDatosReportes(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT de.cod_deudor, de.nombre, de.id, se.fecha, se.descripcion " +
+                    "FROM Deudores de join Seguimiento se ON de.cod_deudor = se.cod_seguimiento WHERE cod_deudor = 1", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+        }
 
 
 

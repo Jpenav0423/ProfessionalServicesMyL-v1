@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_de_Proyecto
 {
     public partial class frmSeguroSeguimiento : Form
     {
+        clsConexion conexion = new clsConexion();
+        SqlCommand cmd;
         public frmSeguroSeguimiento()
         {
             InitializeComponent();
@@ -27,7 +30,12 @@ namespace Pantallas_de_Proyecto
             frmGestiones fmr3 = new frmGestiones();
             fmr3.Show();
             this.Close();
+        }
 
+        private void frmSeguroSeguimiento_Load(object sender, EventArgs e)
+        {
+            conexion.abrir();
+            conexion.cargarDatosSeguimientos(dgvSeguimientos);
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_de_Proyecto
 {
@@ -33,9 +34,12 @@ namespace Pantallas_de_Proyecto
             this.Hide();
         }
 
+        clsConexion conexion = new clsConexion();
+        SqlCommand cmd;
         private void frmReportes_Load(object sender, EventArgs e)
         {
-
+            conexion.abrir();
+            conexion.cargarDatosReportes(dgvReportes);
         }
     }
 }

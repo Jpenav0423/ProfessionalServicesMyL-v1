@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_de_Proyecto
 {
@@ -17,14 +18,19 @@ namespace Pantallas_de_Proyecto
             InitializeComponent();
         }
 
+        clsConexion conexion = new clsConexion();
+        SqlCommand cmd;
         private void Form16_Load(object sender, EventArgs e)
         {
-
+            conexion.abrir();
+            conexion.mostrarDatosGestionesDia(dgvGestionesDia);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            frmMenu frmM = new frmMenu();
+            frmM.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
