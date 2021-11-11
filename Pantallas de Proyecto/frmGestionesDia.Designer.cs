@@ -39,6 +39,7 @@ namespace Pantallas_de_Proyecto
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGestionesDia)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +58,12 @@ namespace Pantallas_de_Proyecto
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Codigo Deudor",
+            "Nombre",
+            "Identidad",
+            "",
+            ""});
             this.comboBox1.Location = new System.Drawing.Point(308, 85);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
@@ -103,7 +110,7 @@ namespace Pantallas_de_Proyecto
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(41, 278);
+            this.button1.Location = new System.Drawing.Point(41, 291);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 84);
@@ -157,12 +164,20 @@ namespace Pantallas_de_Proyecto
             this.label6.TabIndex = 121;
             this.label6.Text = "Buscar Gestiones del Dia";
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(502, 86);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(165, 20);
+            this.txtBuscar.TabIndex = 122;
+            // 
             // frmGestionesDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(885, 857);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvGestionesDia);
@@ -194,5 +209,6 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

@@ -28,5 +28,12 @@ namespace Pantallas_de_Proyecto
             frm12.Show();
             this.Close();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            frmMenu frm2 = new frmMenu();
+            frm2.Show();
+            this.Hide();
+        }
     }
 }

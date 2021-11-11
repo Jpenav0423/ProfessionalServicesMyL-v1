@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_de_Proyecto
 {
     public partial class frmMenu : Form
     {
+        superClase inicio = new superClase();
+        clsConexion conexion = new clsConexion();
+        SqlCommand cmd;
         public frmMenu()
         {
             InitializeComponent();
@@ -65,6 +69,16 @@ namespace Pantallas_de_Proyecto
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            conexion.abrir();
+
+            if (inicio.Gestor == 0)
+            {
+                btnAdministrar.Visible = false;
+            }
         }
     }
 }
