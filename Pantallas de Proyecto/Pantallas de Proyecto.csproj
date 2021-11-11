@@ -107,12 +107,6 @@
     <Compile Include="frmListasUsuarios.Designer.cs">
       <DependentUpon>frmListasUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditarUsuario.Designer.cs">
-      <DependentUpon>frmEditarUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNuevaEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,9 +205,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListasUsuarios.resx">
       <DependentUpon>frmListasUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarUsuario.resx">
-      <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaEmpresa.resx">
       <DependentUpon>frmNuevaEmpresa.cs</DependentUpon>
