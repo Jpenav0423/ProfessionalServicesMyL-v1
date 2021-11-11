@@ -78,7 +78,8 @@ namespace Pantallas_de_Proyecto
             if (inicio.Gestor == 0)
             {
                 btnAdministrar.Visible = false;
-            }
+                btnOpciones.Visible = false;
+            }  
         }
     }
 }

@@ -30,8 +30,7 @@ namespace Pantallas_de_Proyecto
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbBusqueda = new System.Windows.Forms.ComboBox();
             this.dgvGestionesDia = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -55,41 +54,29 @@ namespace Pantallas_de_Proyecto
             this.label1.TabIndex = 0;
             this.label1.Text = "Busqueda por:";
             // 
-            // comboBox1
+            // cmbBusqueda
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Codigo Deudor",
+            this.cmbBusqueda.FormattingEnabled = true;
+            this.cmbBusqueda.Items.AddRange(new object[] {
+            "CodigoDeudor",
             "Nombre",
             "Identidad",
-            "",
-            ""});
-            this.comboBox1.Location = new System.Drawing.Point(308, 85);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(223, 123);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(597, 102);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Criterio de Busqueda";
+            "Telefono"});
+            this.cmbBusqueda.Location = new System.Drawing.Point(308, 85);
+            this.cmbBusqueda.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbBusqueda.Name = "cmbBusqueda";
+            this.cmbBusqueda.Size = new System.Drawing.Size(161, 21);
+            this.cmbBusqueda.TabIndex = 1;
             // 
             // dgvGestionesDia
             // 
             this.dgvGestionesDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGestionesDia.Location = new System.Drawing.Point(223, 245);
+            this.dgvGestionesDia.Location = new System.Drawing.Point(230, 138);
             this.dgvGestionesDia.Margin = new System.Windows.Forms.Padding(2);
             this.dgvGestionesDia.Name = "dgvGestionesDia";
             this.dgvGestionesDia.RowHeadersWidth = 51;
             this.dgvGestionesDia.RowTemplate.Height = 24;
-            this.dgvGestionesDia.Size = new System.Drawing.Size(597, 331);
+            this.dgvGestionesDia.Size = new System.Drawing.Size(597, 438);
             this.dgvGestionesDia.TabIndex = 4;
             // 
             // groupBox3
@@ -152,6 +139,7 @@ namespace Pantallas_de_Proyecto
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label6
             // 
@@ -181,8 +169,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvGestionesDia);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbBusqueda);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGestionesDia";
@@ -200,8 +187,7 @@ namespace Pantallas_de_Proyecto
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cmbBusqueda;
         private System.Windows.Forms.DataGridView dgvGestionesDia;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -200,7 +200,7 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id, fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento" +
+                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id, fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
                     " FROM Deudores", sc);
                 dt = new DataTable();
                 da.Fill(dt);
