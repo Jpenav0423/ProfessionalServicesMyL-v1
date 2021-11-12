@@ -36,6 +36,33 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
             conexion.cargarDatosSeguimientos(dgvSeguimientos);
+            conexion.cargarDatosSeguro();
+
+            try
+            {
+                string query = ("	SELECT de.id, de.nombre, de.correo, di.cod_direccion, di.combre_colonia, de.estado_civil , de.telefono_1, de.telefono_2 " +
+                    " FROM Deudores de JOIN DIrecciones di ON di.cod_direccion = de.cod_deudor ");
+
+                cmd = new SqlCommand(query, conexion.sc);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txtId.Text = reader.GetString(0);
+                    txtNombre.Text = reader.GetString(1);
+                    txtCorreo.Text = reader.GetString(2);
+                    txtDireccion.Text = reader.GetString(3);
+                    txtColonia.Text = reader.GetString(4);
+                    txtEstadoCivil.Text = reader.GetString(5);
+                    TxtTelefono1.Text = reader.GetString(6);
+                    txtTelefono2.Text = reader.GetString(7);
+                }
+
+                reader.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
 
         }
     }

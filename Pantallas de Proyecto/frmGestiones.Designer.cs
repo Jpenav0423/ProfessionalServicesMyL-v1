@@ -34,7 +34,7 @@ namespace Pantallas_de_Proyecto
             this.btnGenerarDocumentos = new System.Windows.Forms.Button();
             this.btnTerminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodDeudor = new System.Windows.Forms.TextBox();
+            this.txtCodDeudorBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscarNombreDeudor = new System.Windows.Forms.TextBox();
             this.btnSeguroYSeguimientos = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@ namespace Pantallas_de_Proyecto
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.codDeudor = new System.Windows.Forms.TextBox();
+            this.txtCodDeudor = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -134,13 +134,13 @@ namespace Pantallas_de_Proyecto
             this.label1.Text = "cod_deudor";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtCodDeudor
+            // txtCodDeudorBuscar
             // 
-            this.txtCodDeudor.Location = new System.Drawing.Point(327, 36);
-            this.txtCodDeudor.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodDeudor.Name = "txtCodDeudor";
-            this.txtCodDeudor.Size = new System.Drawing.Size(198, 20);
-            this.txtCodDeudor.TabIndex = 5;
+            this.txtCodDeudorBuscar.Location = new System.Drawing.Point(327, 36);
+            this.txtCodDeudorBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodDeudorBuscar.Name = "txtCodDeudorBuscar";
+            this.txtCodDeudorBuscar.Size = new System.Drawing.Size(198, 20);
+            this.txtCodDeudorBuscar.TabIndex = 5;
             // 
             // label2
             // 
@@ -211,13 +211,13 @@ namespace Pantallas_de_Proyecto
             this.label5.TabIndex = 13;
             this.label5.Text = "Codigo Deudor:";
             // 
-            // codDeudor
+            // txtCodDeudor
             // 
-            this.codDeudor.Location = new System.Drawing.Point(371, 117);
-            this.codDeudor.Margin = new System.Windows.Forms.Padding(2);
-            this.codDeudor.Name = "codDeudor";
-            this.codDeudor.Size = new System.Drawing.Size(296, 20);
-            this.codDeudor.TabIndex = 14;
+            this.txtCodDeudor.Location = new System.Drawing.Point(371, 117);
+            this.txtCodDeudor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodDeudor.Name = "txtCodDeudor";
+            this.txtCodDeudor.Size = new System.Drawing.Size(296, 20);
+            this.txtCodDeudor.TabIndex = 14;
             // 
             // txtId
             // 
@@ -520,7 +520,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.codDeudor);
+            this.Controls.Add(this.txtCodDeudor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
@@ -528,7 +528,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.btnSeguroYSeguimientos);
             this.Controls.Add(this.txtBuscarNombreDeudor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtCodDeudor);
+            this.Controls.Add(this.txtCodDeudorBuscar);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGestiones";
@@ -551,7 +551,7 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Button btnGenerarDocumentos;
         private System.Windows.Forms.Button btnTerminar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodDeudor;
+        private System.Windows.Forms.TextBox txtCodDeudorBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscarNombreDeudor;
         private System.Windows.Forms.Button btnSeguroYSeguimientos;
@@ -559,7 +559,7 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox codDeudor;
+        private System.Windows.Forms.TextBox txtCodDeudor;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

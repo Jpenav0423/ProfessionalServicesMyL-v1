@@ -156,13 +156,6 @@ namespace Pantallas_de_Proyecto
             }
         }
 
-        public void cargarDatosSeguro()
-        {
-            //Incompleta
-        }
-
-
-
         public void mostrarCaracterizaciones(DataGridView dgv)
         {
             try
@@ -270,12 +263,29 @@ namespace Pantallas_de_Proyecto
   
         }
 
+        public void cargarDatosSeguro()
+        {
+            string query = "SELECT de.id, de.nombre, de.correo, di.cod_direccion, di.combre_colonia, de.estado_civil , de.telefono_1, de.telefono_2  " +
+                "FROM Deudores de JOIN DIrecciones di ON di.cod_direccion = de.cod_deudor";
 
-        
+            SqlCommand cmd = new SqlCommand(query);
+        }
+
+        public void EditarDatosDeudor()
+        {
+            string query = "SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2 " +
+                " FROM Deudores de JOIN DIrecciones di  ON de.cod_deudor = di.cod_direccion WHERE cod_deudor = 1";
+            SqlCommand cmd = new SqlCommand(query);
+        }
 
 
 
-        
-        
+
+
+
+
+
+
+
     }
 }

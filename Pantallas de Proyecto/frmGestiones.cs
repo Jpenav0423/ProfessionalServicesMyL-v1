@@ -69,10 +69,10 @@ namespace Pantallas_de_Proyecto
         {
 
            // char deudor;
-
+           
             try
             {
-                
+                /*
                 string query = ("SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE nombre = '" + txtBuscarNombreDeudor.Text + "' ");
                 
                 //cmd = new SqlCommand("SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE nombre = '" + txtBuscarNombreDeudor.Text + "' ", conexion.sc);
@@ -85,10 +85,24 @@ namespace Pantallas_de_Proyecto
 
                 while (reader.Read())
                 {
+                    txtCodDeudor.Text = reader.GetString(0);
                     txtNombre.Text = reader.GetString(1);
+                    txtId.Text = reader.GetString(2);
+                    txtRtn.Text = reader.GetString(3);
+                    txtNumTelefono1.Text = reader.GetString(4);
+                    txtNumTelefono2.Text =  reader.GetString(5);
+                    txtCorreo.Text = reader.GetString(6);
+                    txtCodDireccion.Text = reader.GetString(7);
+                    txtPrestamo.Text = reader.GetString(8);
+                    txtFechaPago.Text = reader.GetString(9);
+                    txtSaldoTotal.Text = reader.GetString(10);
+                    txtFechaUltimoPago.Text = reader.GetString(11);
+                    txtFechaAtraso.Text = reader.GetString(12);
                 }
 
 
+                reader.Close();
+            
 
                 /*
                 txtNombre.Text = conexion.mostarDatoGestiones();
@@ -108,7 +122,7 @@ namespace Pantallas_de_Proyecto
                 //txtBuscarNombreDeudor.Text = deudor.ToString(); ;
 
                 cmd = new SqlCommand(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor " +
-                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_deudor ", conexion.sc);
+                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_deudor  ", conexion.sc);
                 cmd.ExecuteNonQuery();
                 conexion.cargarDatosReferecnias(dgvReferencias);
 
