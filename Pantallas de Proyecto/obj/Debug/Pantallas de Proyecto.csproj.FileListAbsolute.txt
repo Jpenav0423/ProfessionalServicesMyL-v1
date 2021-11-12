@@ -103,7 +103,6 @@ C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmBusquedaDe
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmCaracterizacion.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmGestionesDia.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListasUsuarios.resources
-C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNuevaEmpresa.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmMenu.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmModArregloPago.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListaEmpresasADMIN.resources
