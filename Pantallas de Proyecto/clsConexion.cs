@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Pantallas_de_Proyecto
 {
-    class clsConexion
+    class clsConexion:superClase
     {
         SqlDataAdapter da;
         DataTable dt;
@@ -278,6 +278,21 @@ namespace Pantallas_de_Proyecto
             SqlCommand cmd = new SqlCommand(query);
         }
 
+        public void CargarDatosSeguroSocial(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2 " +
+                    " FROM Deudores de JOIN DIrecciones di  ON de.cod_deudor = di.cod_direccion WHERE cod_deudor = 1", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("ERROR, NO SE LOGRARON CARGAR LOS DATOS  " + ex  , "ERROR", MessageBoxButtons.OK);
+            }
+        }
 
 
 

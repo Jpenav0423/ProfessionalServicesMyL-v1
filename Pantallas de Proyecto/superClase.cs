@@ -11,7 +11,7 @@ namespace Pantallas_de_Proyecto
 {
     class superClase
     {
-        clsConexion conexion = new clsConexion();
+        
 
         public static int administrador = 0;
         public static int gestor = 0;

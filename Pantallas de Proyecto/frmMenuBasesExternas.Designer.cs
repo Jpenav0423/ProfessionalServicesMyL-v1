@@ -36,7 +36,7 @@ namespace Pantallas_de_Proyecto
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnListaEmpresasAdmin = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +47,9 @@ namespace Pantallas_de_Proyecto
             this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.btnCancelarYSalir);
             this.groupBox3.Location = new System.Drawing.Point(2, 1);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(196, 722);
             this.groupBox3.TabIndex = 123;
             this.groupBox3.TabStop = false;
@@ -58,7 +58,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
             this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -69,7 +69,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnCancelarYSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelarYSalir.Location = new System.Drawing.Point(37, 446);
-            this.btnCancelarYSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarYSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarYSalir.Name = "btnCancelarYSalir";
             this.btnCancelarYSalir.Size = new System.Drawing.Size(110, 84);
             this.btnCancelarYSalir.TabIndex = 15;
@@ -82,7 +82,7 @@ namespace Pantallas_de_Proyecto
             this.btnBasesExternas.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBasesExternas.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBasesExternas.Location = new System.Drawing.Point(241, 119);
-            this.btnBasesExternas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBasesExternas.Margin = new System.Windows.Forms.Padding(2);
             this.btnBasesExternas.Name = "btnBasesExternas";
             this.btnBasesExternas.Size = new System.Drawing.Size(194, 101);
             this.btnBasesExternas.TabIndex = 124;
@@ -95,7 +95,7 @@ namespace Pantallas_de_Proyecto
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(577, 119);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 101);
             this.button1.TabIndex = 125;
@@ -108,7 +108,7 @@ namespace Pantallas_de_Proyecto
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(241, 271);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(194, 101);
             this.button2.TabIndex = 126;
@@ -127,18 +127,18 @@ namespace Pantallas_de_Proyecto
             this.label1.TabIndex = 127;
             this.label1.Text = "PORFAVOR SELECCIONE UNA";
             // 
-            // button3
+            // btnListaEmpresasAdmin
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(577, 271);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 101);
-            this.button3.TabIndex = 128;
-            this.button3.Text = "Lista De Empresas Administrativa";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnListaEmpresasAdmin.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnListaEmpresasAdmin.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaEmpresasAdmin.Location = new System.Drawing.Point(577, 271);
+            this.btnListaEmpresasAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListaEmpresasAdmin.Name = "btnListaEmpresasAdmin";
+            this.btnListaEmpresasAdmin.Size = new System.Drawing.Size(194, 101);
+            this.btnListaEmpresasAdmin.TabIndex = 128;
+            this.btnListaEmpresasAdmin.Text = "Lista De Empresas Administrativa";
+            this.btnListaEmpresasAdmin.UseVisualStyleBackColor = false;
+            this.btnListaEmpresasAdmin.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmMenuBasesExternas
             // 
@@ -146,16 +146,17 @@ namespace Pantallas_de_Proyecto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(885, 857);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnListaEmpresasAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBasesExternas);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuBasesExternas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuBasesExternas";
+            this.Load += new System.EventHandler(this.frmMenuBasesExternas_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -172,6 +173,6 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnListaEmpresasAdmin;
     }
 }

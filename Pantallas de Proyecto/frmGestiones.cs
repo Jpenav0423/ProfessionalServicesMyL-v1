@@ -61,8 +61,12 @@ namespace Pantallas_de_Proyecto
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            conexion.cerrar();
             conexion.abrir();
+           
+            if(conexion.Administrador == 0)
+            {
+                btnEditarDatos.Visible = false;
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

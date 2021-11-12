@@ -74,8 +74,13 @@ namespace Pantallas_de_Proyecto
         private void frmMenu_Load(object sender, EventArgs e)
         {
             conexion.abrir();
-
-
+            
+            if(conexion.Administrador == 0)
+            {
+                btnAdministrar.Visible = false;
+                btnOpciones.Visible = false;
+            }
+            
         }
     }
 }

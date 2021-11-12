@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_de_Proyecto
 {
     public partial class frmMenuBasesExternas : Form
     {
+        clsConexion conexion = new clsConexion();
         public frmMenuBasesExternas()
         {
             InitializeComponent();
@@ -19,9 +21,9 @@ namespace Pantallas_de_Proyecto
 
         private void btnBasesExternas_Click(object sender, EventArgs e)
         {
-            frmListasUsuarios frmLU = new frmListasUsuarios();
-            frmLU.Show();
-            this.Hide();
+            frmNombreCliente frmNC = new frmNombreCliente();
+            frmNC.Show();
+            this.Hide(); 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +50,16 @@ namespace Pantallas_de_Proyecto
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmMenuBasesExternas_Load(object sender, EventArgs e)
+        {
+            conexion.abrir();
+
+            if(conexion.Administrador == 0)
+            {
+                btnListaEmpresasAdmin.Visible = false;
+            }
         }
     }
 }
