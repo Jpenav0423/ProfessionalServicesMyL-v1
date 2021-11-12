@@ -230,10 +230,14 @@ namespace Pantallas_de_Proyecto
         
         public string mostarDatoGestiones()
         {
-
+            return mostarDatoGestiones();
+            /*
+            try
+            {
+                sc.Open();
                 string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
-                 "deuda_total, fecha_ultimo_pago, fecha_atraso" +
-                    " FROM Deudores Order By cod_deudor ";
+                "deuda_total, fecha_ultimo_pago, fecha_atraso" +
+                   " FROM Deudores Order By cod_deudor ";
 
                 SqlCommand cmd = new SqlCommand(query);
 
@@ -242,17 +246,28 @@ namespace Pantallas_de_Proyecto
                 if (reader.Read())
                 {
                     return reader["cod_deudor, nombre, id, RTN, telefono_1 , telefono_2, cod_direccion, prestamo," +
-                       " fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso "].ToString();
+                           " fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso "].ToString();
                 }
                 else
                 {
-                return (nul"");
+                    return ("NULL");
+
                 }
+            }catch(Exception EX)
+            {
+                MessageBox.Show(EX.Message.ToString());
+            }
+            
 
+             finally
+            {
+                sc.Close();
+            }
 
-
-
+            */
         }
+
+        
 
         public void cargarDatosReferecnias(DataGridView dgv)
         {
@@ -270,6 +285,8 @@ namespace Pantallas_de_Proyecto
             }
 
         }
+
+
         
 
 

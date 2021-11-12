@@ -15,6 +15,7 @@ namespace Pantallas_de_Proyecto
     {
 
         clsConexion conexion = new clsConexion();
+        superClase superClase = new superClase();
         SqlCommand cmd;
         public frmGestiones()
         {

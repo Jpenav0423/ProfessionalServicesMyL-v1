@@ -36,6 +36,7 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
             conexion.cargarDatosSeguimientos(dgvSeguimientos);
+
         }
     }
 }
