@@ -47,12 +47,13 @@ namespace Pantallas_de_Proyecto
             conexion.cerrar();
         }
 
+        /*
         public string MostrarDatosSeguroSeguimiento()
         {
             conexion.abrir();
             string query =   
         }
-
+        */
     }
 
 
