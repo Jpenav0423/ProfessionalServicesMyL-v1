@@ -227,7 +227,50 @@ namespace Pantallas_de_Proyecto
                 MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
             }
         }
+        
+        public string mostarDatoGestiones()
+        {
 
+                string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
+                 "deuda_total, fecha_ultimo_pago, fecha_atraso" +
+                    " FROM Deudores Order By cod_deudor ";
+
+                SqlCommand cmd = new SqlCommand(query);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return reader["cod_deudor, nombre, id, RTN, telefono_1 , telefono_2, cod_direccion, prestamo," +
+                       " fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso "].ToString();
+                }
+                else
+                {
+                return (nul"");
+                }
+
+
+
+
+        }
+
+        public void cargarDatosReferecnias(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor " +
+                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_deudor WHERE cod_deudor = 1 ORDER BY cod_deudor ",sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+
+        }
+        
 
 
 
