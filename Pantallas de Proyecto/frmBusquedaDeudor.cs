@@ -21,5 +21,10 @@ namespace Pantallas_de_Proyecto
         {
 
         }
+
+        private void frmBusquedaDeudor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

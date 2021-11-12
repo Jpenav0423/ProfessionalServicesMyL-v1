@@ -21,5 +21,10 @@ namespace Pantallas_de_Proyecto
         {
 
         }
+
+        private void btnCancelarYSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

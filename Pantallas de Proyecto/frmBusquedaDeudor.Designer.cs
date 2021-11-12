@@ -301,6 +301,7 @@ namespace Pantallas_de_Proyecto
             this.Name = "frmBusquedaDeudor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "+";
+            this.Load += new System.EventHandler(this.frmBusquedaDeudor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

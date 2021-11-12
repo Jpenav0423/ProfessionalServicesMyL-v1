@@ -75,11 +75,7 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
 
-            if (inicio.Gestor == 0)
-            {
-                btnAdministrar.Visible = false;
-                btnOpciones.Visible = false;
-            }  
+
         }
     }
 }

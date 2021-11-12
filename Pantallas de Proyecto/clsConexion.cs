@@ -144,7 +144,7 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                da = new SqlDataAdapter("SELECT * FROM empresas", sc);
+                da = new SqlDataAdapter("SELECT * FROM Contactos", sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;

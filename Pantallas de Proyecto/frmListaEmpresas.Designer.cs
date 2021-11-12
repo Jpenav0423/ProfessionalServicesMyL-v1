@@ -30,91 +30,87 @@ namespace Pantallas_de_Proyecto
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dgvListaEmpresasG = new System.Windows.Forms.DataGridView();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.btnNuevaEmpresa = new System.Windows.Forms.Button();
             this.btnEditarEmpresa = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cod_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtNota = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNombreEmpresa = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCodContacto = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpresasG)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Wide Latin", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(226, 17);
+            this.label4.Location = new System.Drawing.Point(344, 17);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(347, 18);
             this.label4.TabIndex = 108;
             this.label4.Text = "Buscar Lista de Empresas:";
             // 
-            // dataGridView1
+            // dgvListaEmpresasG
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cod_contacto,
-            this.nombre,
-            this.telefono,
-            this.nota});
-            this.dataGridView1.Location = new System.Drawing.Point(205, 164);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(671, 454);
-            this.dataGridView1.TabIndex = 107;
+            this.dgvListaEmpresasG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaEmpresasG.Location = new System.Drawing.Point(205, 378);
+            this.dgvListaEmpresasG.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListaEmpresasG.Name = "dgvListaEmpresasG";
+            this.dgvListaEmpresasG.RowHeadersWidth = 51;
+            this.dgvListaEmpresasG.RowTemplate.Height = 24;
+            this.dgvListaEmpresasG.Size = new System.Drawing.Size(671, 240);
+            this.dgvListaEmpresasG.TabIndex = 107;
             // 
-            // btnBuscar
+            // btnMostrar
             // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBuscar.Location = new System.Drawing.Point(41, 164);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 84);
-            this.btnBuscar.TabIndex = 106;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(227, 58);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 13);
-            this.label3.TabIndex = 103;
-            this.label3.Text = "Nombre del la Empresa";
+            this.btnMostrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMostrar.Location = new System.Drawing.Point(41, 164);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(112, 84);
+            this.btnMostrar.TabIndex = 106;
+            this.btnMostrar.Text = "Mostrar Datos";
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // cmbBuscar
             // 
             this.cmbBuscar.FormattingEnabled = true;
-            this.cmbBuscar.Location = new System.Drawing.Point(230, 84);
-            this.cmbBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBuscar.Items.AddRange(new object[] {
+            "Nombre",
+            "Telefono",
+            "Contacto Empresa"});
+            this.cmbBuscar.Location = new System.Drawing.Point(14, 43);
+            this.cmbBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBuscar.Name = "cmbBuscar";
-            this.cmbBuscar.Size = new System.Drawing.Size(307, 21);
+            this.cmbBuscar.Size = new System.Drawing.Size(200, 21);
             this.cmbBuscar.TabIndex = 101;
             // 
             // btnNuevaEmpresa
             // 
             this.btnNuevaEmpresa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNuevaEmpresa.Location = new System.Drawing.Point(41, 401);
-            this.btnNuevaEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevaEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevaEmpresa.Name = "btnNuevaEmpresa";
             this.btnNuevaEmpresa.Size = new System.Drawing.Size(112, 84);
             this.btnNuevaEmpresa.TabIndex = 109;
-            this.btnNuevaEmpresa.Text = "Nueva Empresa";
+            this.btnNuevaEmpresa.Text = "Agregar Empresa";
             this.btnNuevaEmpresa.UseVisualStyleBackColor = false;
             this.btnNuevaEmpresa.Click += new System.EventHandler(this.btnNuevaEmpresa_Click);
             // 
@@ -122,11 +118,11 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnEditarEmpresa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEditarEmpresa.Location = new System.Drawing.Point(41, 281);
-            this.btnEditarEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarEmpresa.Name = "btnEditarEmpresa";
             this.btnEditarEmpresa.Size = new System.Drawing.Size(112, 84);
             this.btnEditarEmpresa.TabIndex = 110;
-            this.btnEditarEmpresa.Text = "Editar Empresa";
+            this.btnEditarEmpresa.Text = "Modificar Empresa";
             this.btnEditarEmpresa.UseVisualStyleBackColor = false;
             this.btnEditarEmpresa.Click += new System.EventHandler(this.btnEditarEmpresa_Click);
             // 
@@ -134,7 +130,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSalir.Location = new System.Drawing.Point(41, 534);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(112, 84);
             this.btnSalir.TabIndex = 111;
@@ -147,13 +143,13 @@ namespace Pantallas_de_Proyecto
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.btnSalir);
-            this.groupBox2.Controls.Add(this.btnBuscar);
+            this.groupBox2.Controls.Add(this.btnMostrar);
             this.groupBox2.Controls.Add(this.btnNuevaEmpresa);
             this.groupBox2.Controls.Add(this.btnEditarEmpresa);
             this.groupBox2.Location = new System.Drawing.Point(1, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(196, 722);
             this.groupBox2.TabIndex = 116;
             this.groupBox2.TabStop = false;
@@ -162,42 +158,116 @@ namespace Pantallas_de_Proyecto
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
             this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // cod_contacto
-            // 
-            this.cod_contacto.HeaderText = "cod_contacto";
-            this.cod_contacto.Name = "cod_contacto";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 150;
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.Width = 150;
-            // 
-            // nota
-            // 
-            this.nota.HeaderText = "nota";
-            this.nota.Name = "nota";
-            this.nota.Width = 220;
-            // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(568, 85);
+            this.txtBuscar.Location = new System.Drawing.Point(228, 43);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(167, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(200, 20);
             this.txtBuscar.TabIndex = 117;
+            // 
+            // txtNota
+            // 
+            this.txtNota.Location = new System.Drawing.Point(347, 142);
+            this.txtNota.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNota.Multiline = true;
+            this.txtNota.Name = "txtNota";
+            this.txtNota.Size = new System.Drawing.Size(412, 106);
+            this.txtNota.TabIndex = 125;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(258, 145);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.TabIndex = 124;
+            this.label5.Text = "Nota: ";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(347, 107);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(412, 20);
+            this.txtTelefono.TabIndex = 123;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(258, 107);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 122;
+            this.label1.Text = "Telefono";
+            // 
+            // txtNombreEmpresa
+            // 
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(507, 66);
+            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreEmpresa.Name = "txtNombreEmpresa";
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(252, 20);
+            this.txtNombreEmpresa.TabIndex = 121;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(447, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 120;
+            this.label2.Text = "Nombre";
+            // 
+            // txtCodContacto
+            // 
+            this.txtCodContacto.Location = new System.Drawing.Point(347, 66);
+            this.txtCodContacto.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodContacto.Name = "txtCodContacto";
+            this.txtCodContacto.Size = new System.Drawing.Size(47, 20);
+            this.txtCodContacto.TabIndex = 119;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(258, 66);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.TabIndex = 118;
+            this.label6.Text = "Codigo Contacto";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.txtBuscar);
+            this.groupBox1.Controls.Add(this.cmbBuscar);
+            this.groupBox1.Location = new System.Drawing.Point(247, 271);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(577, 94);
+            this.groupBox1.TabIndex = 126;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Busqueda";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBuscar.Location = new System.Drawing.Point(451, 32);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(112, 41);
+            this.btnBuscar.TabIndex = 112;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmListaEmpresas
             // 
@@ -205,19 +275,28 @@ namespace Pantallas_de_Proyecto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(885, 857);
-            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtNota);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNombreEmpresa);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCodContacto);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbBuscar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.dgvListaEmpresasG);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListaEmpresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista De Empresas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmListaEmpresas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpresasG)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,19 +305,24 @@ namespace Pantallas_de_Proyecto
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvListaEmpresasG;
+        private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.ComboBox cmbBuscar;
         private System.Windows.Forms.Button btnNuevaEmpresa;
         private System.Windows.Forms.Button btnEditarEmpresa;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod_contacto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nota;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.TextBox txtNota;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNombreEmpresa;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCodContacto;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

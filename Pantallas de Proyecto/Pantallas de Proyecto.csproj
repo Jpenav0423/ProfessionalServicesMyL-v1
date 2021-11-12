@@ -77,12 +77,6 @@
     <Compile Include="frmTipoReporte.Designer.cs">
       <DependentUpon>frmTipoReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNombreEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNombreEmpresa.Designer.cs">
-      <DependentUpon>frmNombreEmpresa.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmBusquedaDeudor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,9 +184,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoReporte.resx">
       <DependentUpon>frmTipoReporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNombreEmpresa.resx">
-      <DependentUpon>frmNombreEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBusquedaDeudor.resx">
       <DependentUpon>frmBusquedaDeudor.cs</DependentUpon>
