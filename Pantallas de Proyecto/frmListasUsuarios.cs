@@ -96,7 +96,7 @@ namespace Pantallas_de_Proyecto
 
             }catch(Exception ex)
             {
-                MessageBox.Show("ERROR NO SE PUEDEN CARGAR LOS DATOS", "ERROR");
+                MessageBox.Show("ERROR NO SE PUEDEN CARGAR LOS DATOS" + ex , "ERROR");
             }
         }
 

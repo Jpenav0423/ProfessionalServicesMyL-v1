@@ -123,23 +123,6 @@ namespace Pantallas_de_Proyecto
             }
         }
 
-
-        public void CargarDatosGestiones()
-        {
-            try
-            {
-                da = new SqlDataAdapter("SELECT * FROM deudores", sc);
-                dt = new DataTable();
-                da.Fill(dt);
-                IDataReader read;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
-
-            }
-        }
-
         public void cargarDatosListaEmpresas(DataGridView dgv)
         {
             try
@@ -228,46 +211,38 @@ namespace Pantallas_de_Proyecto
             }
         }
         
+        /*
         public string mostarDatoGestiones()
         {
-            return mostarDatoGestiones();
-            /*
-            try
-            {
-                sc.Open();
-                string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
-                "deuda_total, fecha_ultimo_pago, fecha_atraso" +
-                   " FROM Deudores Order By cod_deudor ";
-
-                SqlCommand cmd = new SqlCommand(query);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    return reader["cod_deudor, nombre, id, RTN, telefono_1 , telefono_2, cod_direccion, prestamo," +
-                           " fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso "].ToString();
-                }
-                else
-                {
-                    return ("NULL");
-
-                }
-            }catch(Exception EX)
-            {
-                MessageBox.Show(EX.Message.ToString());
-            }
             
 
-             finally
-            {
-                sc.Close();
-            }
+            //return mostarDatoGestiones();
 
-            */
+            
+            string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
+                   "deuda_total, fecha_ultimo_pago, fecha_atraso" +
+                   " FROM Deudores Order By cod_deudor ";
+
+            SqlCommand cmd = new SqlCommand(query);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            
+
+            if (reader.Read())
+            {
+               return reader["cod_deudor, nombre, id, RTN, telefono_1 , telefono_2, cod_direccion, prestamo," +
+                           " fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso "].ToString();
+            }
+           else
+            {
+                reader.Close();
+                sc.Close();
+                return ("NULL");
+ 
+            }
         }
 
-        
+        */
 
         public void cargarDatosReferecnias(DataGridView dgv)
         {
@@ -284,6 +259,15 @@ namespace Pantallas_de_Proyecto
                 MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
             }
 
+        }
+
+        public void cargarDatosGestiones()
+        {
+            string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
+                   "deuda_total, fecha_ultimo_pago, fecha_atraso" +
+                   " FROM Deudores Order By cod_deudor ";
+            SqlCommand cmd = new SqlCommand(query);
+  
         }
 
 

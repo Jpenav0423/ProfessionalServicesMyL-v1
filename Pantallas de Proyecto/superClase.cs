@@ -23,7 +23,7 @@ namespace Pantallas_de_Proyecto
         public int Supervisor { get => supervisor; set => supervisor = value; }
         public int InicioExitoso { get => inicioExitoso; set => inicioExitoso = value;  }
 
-        public string mostarDatoGestiones()
+        /*public string mostarDatoGestiones()
         {
             conexion.abrir();
             string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
