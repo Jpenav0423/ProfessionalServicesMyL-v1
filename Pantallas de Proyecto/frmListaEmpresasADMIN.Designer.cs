@@ -60,7 +60,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.dgvListaEmpresA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaEmpresA.Location = new System.Drawing.Point(228, 381);
-            this.dgvListaEmpresA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvListaEmpresA.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaEmpresA.Name = "dgvListaEmpresA";
             this.dgvListaEmpresA.RowHeadersWidth = 51;
             this.dgvListaEmpresA.RowTemplate.Height = 24;
@@ -71,7 +71,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnAgregarEmpresaA.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregarEmpresaA.Location = new System.Drawing.Point(53, 244);
-            this.btnAgregarEmpresaA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarEmpresaA.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarEmpresaA.Name = "btnAgregarEmpresaA";
             this.btnAgregarEmpresaA.Size = new System.Drawing.Size(92, 60);
             this.btnAgregarEmpresaA.TabIndex = 4;
@@ -83,7 +83,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Location = new System.Drawing.Point(53, 344);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(92, 60);
             this.btnModificar.TabIndex = 5;
@@ -100,9 +100,9 @@ namespace Pantallas_de_Proyecto
             this.groupBox3.Controls.Add(this.btnMostrar);
             this.groupBox3.Controls.Add(this.btnCancelar);
             this.groupBox3.Location = new System.Drawing.Point(1, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(196, 722);
             this.groupBox3.TabIndex = 125;
             this.groupBox3.TabStop = false;
@@ -111,7 +111,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
             this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +122,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnMostrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnMostrar.Location = new System.Drawing.Point(53, 155);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(92, 60);
             this.btnMostrar.TabIndex = 3;
@@ -134,7 +134,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelar.Location = new System.Drawing.Point(53, 461);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 60);
             this.btnCancelar.TabIndex = 11;
@@ -279,6 +279,7 @@ namespace Pantallas_de_Proyecto
             this.btnLimpiar.TabIndex = 137;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // frmListaEmpresasADMIN
             // 
@@ -300,7 +301,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvListaEmpresA);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListaEmpresasADMIN";
             this.Text = "Lista de Empresas";
             this.Load += new System.EventHandler(this.frmListaEmpresasADMIN_Load);

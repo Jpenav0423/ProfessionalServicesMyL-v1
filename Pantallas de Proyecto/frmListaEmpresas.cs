@@ -45,7 +45,8 @@ namespace Pantallas_de_Proyecto
         {
            try
             {
-                cmd = new SqlCommand("UPDATE Contactos SET nombre = '" + txtNombreEmpresa.Text + "' , telefono = '" + txtTelefono.Text + "' , nota = '" + txtNota.Text + "' WHERE cod_contacto = " + txtCodContacto.Text + " ", conexion.sc);
+                cmd = new SqlCommand("UPDATE Contactos SET nombre = '" + txtNombreEmpresa.Text + "' , telefono = '" + txtTelefono.Text + "' ," +
+                    " nota = '" + txtNota.Text + "' WHERE cod_contacto = " + txtCodContacto.Text + " ", conexion.sc);
                 MessageBox.Show("Se han actualizado los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cmd.ExecuteNonQuery();
                 conexion.cargarDatosListaEmpresas(dgvListaEmpresasG);
