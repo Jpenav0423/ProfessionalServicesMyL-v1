@@ -33,7 +33,7 @@ namespace Pantallas_de_Proyecto
             SqlCommand cmd = new SqlCommand(query);
 
             SqlDataReader reader = cmd.ExecuteReader();
-
+            
             if (reader.Read())
             {
                 return reader["cod_deudor, nombre, id, RTN, telefono_1 , telefono_2, cod_direccion, prestamo," +
