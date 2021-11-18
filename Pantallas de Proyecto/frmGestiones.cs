@@ -14,6 +14,9 @@ namespace Pantallas_de_Proyecto
     public partial class frmGestiones : Form
     {
 
+
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL;Integrated Security=true;");
+
         clsConexion conexion = new clsConexion();
         superClase superClase = new superClase();
         SqlCommand cmd;
@@ -71,59 +74,31 @@ namespace Pantallas_de_Proyecto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-           // char deudor;
+            con.Open();
            
             try
             {
-                /*
-                string query = ("SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE nombre = '" + txtBuscarNombreDeudor.Text + "' ");
-                
-                //cmd = new SqlCommand("SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE nombre = '" + txtBuscarNombreDeudor.Text + "' ", conexion.sc);
-                cmd = new SqlCommand(query, conexion.sc);
-                conexion.cargarDatosGestiones();
-                SqlDataReader reader = cmd.ExecuteReader();
-                
 
-                //cmd.ExecuteReader();
+                SqlCommand command = new SqlCommand("SELECT cod_deudor, nombre, id, RTN, telefono_1, telefono_2, correo, cod_direccion, prestamo, fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE  nombre = '"+txtBuscarNombreDeudor.Text+"'" , con);
+                SqlDataReader srd = command.ExecuteReader();
 
-                while (reader.Read())
+                while (srd.Read())
                 {
-                    txtCodDeudor.Text = reader.GetString(0);
-                    txtNombre.Text = reader.GetString(1);
-                    txtId.Text = reader.GetString(2);
-                    txtRtn.Text = reader.GetString(3);
-                    txtNumTelefono1.Text = reader.GetString(4);
-                    txtNumTelefono2.Text =  reader.GetString(5);
-                    txtCorreo.Text = reader.GetString(6);
-                    txtCodDireccion.Text = reader.GetString(7);
-                    txtPrestamo.Text = reader.GetString(8);
-                    txtFechaPago.Text = reader.GetString(9);
-                    txtSaldoTotal.Text = reader.GetString(10);
-                    txtFechaUltimoPago.Text = reader.GetString(11);
-                    txtFechaAtraso.Text = reader.GetString(12);
+                    txtCodDeudor.Text = srd.GetValue(0).ToString();
+                    txtNombre.Text = srd.GetValue(1).ToString();
+                    txtId.Text = srd.GetValue(2).ToString();
+                    txtRtn.Text = srd.GetValue(3).ToString();
+                    txtNumTelefono1.Text = srd.GetValue(4).ToString();
+                    txtNumTelefono2.Text = srd.GetValue(5).ToString();
+                    txtCorreo.Text = srd.GetValue(6).ToString();
+                    txtCodDireccion.Text = srd.GetValue(7).ToString();
+                    txtPrestamo.Text = srd.GetValue(8).ToString();
+                    txtFechaPago.Text = srd.GetValue(9).ToString();
+                    txtSaldoTotal.Text = srd.GetValue(10).ToString();
+                    txtFechaUltimoPago.Text = srd.GetValue(11).ToString();
+                    txtFechaAtraso.Text = srd.GetValue(12).ToString();
                 }
 
-
-                reader.Close();
-            
-
-                /*
-                txtNombre.Text = conexion.mostarDatoGestiones();
-                txtId.Text = conexion.mostarDatoGestiones();
-                txtRtn.Text = conexion.mostarDatoGestiones();
-                txtNumTelefono1.Text = conexion.mostarDatoGestiones();
-                txtNumTelefono2.Text = conexion.mostarDatoGestiones();
-                txtCorreo.Text = conexion.mostarDatoGestiones();
-                txtCodDireccion.Text = conexion.mostarDatoGestiones();
-                txtPrestamo.Text = conexion.mostarDatoGestiones();
-                txtSaldoTotal.Text = conexion.mostarDatoGestiones();
-                txtFechaPago.Text = conexion.mostarDatoGestiones();
-                txtFechaUltimoPago.Text = conexion.mostarDatoGestiones();
-                txtFechaAtraso.Text = conexion.mostarDatoGestiones();
-                */
-
-                //txtBuscarNombreDeudor.Text = deudor.ToString(); ;
 
                 cmd = new SqlCommand(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor " +
                     " FROM Aval av join Deudores de ON av.cod_aval = de.cod_deudor  ", conexion.sc);
@@ -136,6 +111,8 @@ namespace Pantallas_de_Proyecto
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+
+            con.Close();
         }
     }
 }

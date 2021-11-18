@@ -37,7 +37,7 @@ namespace Pantallas_de_Proyecto
             this.label9 = new System.Windows.Forms.Label();
             this.txtTelefono2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtCodDireccion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtColonia = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -125,13 +125,13 @@ namespace Pantallas_de_Proyecto
             this.label8.TabIndex = 23;
             this.label8.Text = "No. de Telefono:";
             // 
-            // txtDireccion
+            // txtCodDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(141, 176);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(296, 20);
-            this.txtDireccion.TabIndex = 34;
+            this.txtCodDireccion.Location = new System.Drawing.Point(141, 176);
+            this.txtCodDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodDireccion.Name = "txtCodDireccion";
+            this.txtCodDireccion.Size = new System.Drawing.Size(296, 20);
+            this.txtCodDireccion.TabIndex = 34;
             // 
             // label12
             // 
@@ -139,9 +139,9 @@ namespace Pantallas_de_Proyecto
             this.label12.Location = new System.Drawing.Point(28, 180);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 13);
+            this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 33;
-            this.label12.Text = "Direccion:";
+            this.label12.Text = "Cod Direccion:";
             // 
             // txtColonia
             // 
@@ -254,7 +254,7 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtEstadoCivil);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtCodDireccion);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtColonia);
             this.Controls.Add(this.label11);
@@ -289,7 +289,7 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTelefono2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtCodDireccion;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtColonia;
         private System.Windows.Forms.Label label11;

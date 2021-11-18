@@ -13,6 +13,7 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmSeguroSeguimiento : Form
     {
+        SqlConnection con2 = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL;Integrated Security=true;");
         clsConexion conexion = new clsConexion();
         SqlCommand cmd;
         public frmSeguroSeguimiento()
@@ -36,34 +37,35 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
             conexion.cargarDatosSeguimientos(dgvSeguimientos);
-            conexion.cargarDatosSeguro();
+            con2.Open();
 
             try
             {
-                string query = ("	SELECT de.id, de.nombre, de.correo, di.cod_direccion, di.combre_colonia, de.estado_civil , de.telefono_1, de.telefono_2 " +
-                    " FROM Deudores de JOIN DIrecciones di ON di.cod_direccion = de.cod_deudor ");
+                SqlCommand command = new SqlCommand("SELECT de.id, de.nombre, de.correo, di.cod_direccion, di.combre_colonia, de.estado_civil, de.telefono_1, de.telefono_2 " +
+                    " FROM Deudores de JOIN DIrecciones di ON di.cod_direccion = de.cod_deudor", con2);
+                SqlDataReader srd = command.ExecuteReader();
 
-                cmd = new SqlCommand(query, conexion.sc);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                while (srd.Read())
                 {
-                    txtId.Text = reader.GetString(0);
-                    txtNombre.Text = reader.GetString(1);
-                    txtCorreo.Text = reader.GetString(2);
-                    txtDireccion.Text = reader.GetString(3);
-                    txtColonia.Text = reader.GetString(4);
-                    txtEstadoCivil.Text = reader.GetString(5);
-                    TxtTelefono1.Text = reader.GetString(6);
-                    txtTelefono2.Text = reader.GetString(7);
+                    txtId.Text = srd.GetValue(0).ToString();
+                    txtNombre.Text = srd.GetValue(1).ToString();
+                    txtCorreo.Text = srd.GetValue(2).ToString();
+                    txtCodDireccion.Text = srd.GetValue(3).ToString();
+                    txtColonia.Text = srd.GetValue(4).ToString();
+                    txtEstadoCivil.Text = srd.GetValue(5).ToString();
+                    TxtTelefono1.Text = srd.GetValue(6).ToString();
+                    txtTelefono2.Text = srd.GetValue(7).ToString();
+
+
                 }
 
-                reader.Close();
+
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
 
+            con2.Close();
         }
     }
 }

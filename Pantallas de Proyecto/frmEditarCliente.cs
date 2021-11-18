@@ -13,7 +13,7 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmEditarCliente : Form
     {
-
+        SqlConnection con3 = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL;Integrated Security=true;");
         clsConexion conexion = new clsConexion();
         SqlCommand cmd;
         public frmEditarCliente()
@@ -63,30 +63,27 @@ namespace Pantallas_de_Proyecto
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
+            con3.Open();
             try
             {
-                string query = ("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2 " +
-                    " FROM Deudores de JOIN DIrecciones di  ON de.cod_deudor = di.cod_direccion WHERE cod_deudor = "+txtBuscarCodDeudor.Text+" ");
-                cmd = new SqlCommand(query, conexion.sc);
-                conexion.EditarDatosDeudor();
+                SqlCommand command = new SqlCommand("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2  " +
+                    "FROM Deudores JOIN DIrecciones di ON de.cod_deudor = di.cod_direccion WHERE cod_deudor = 1 ", con3);
+                SqlDataReader srd = command.ExecuteReader();
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                while (srd.Read())
                 {
-                    txtNombre.Text = reader.GetString(1);
-                    txtID.Text = reader.GetString(2);
-                    txtCorreo.Text = reader.GetString(3);
-                    txtCodDireccion.Text = reader.GetString(4);
-                    txtColonia.Text = reader.GetString(5);
-                    txtTelefono1.Text = reader.GetString(6);
-                    txtTelefono2.Text = reader.GetString(7);
+                    txtNombre.Text = srd.GetValue(0).ToString();
+                    txtID.Text = srd.GetValue(1).ToString();
+                    txtCorreo.Text = srd.GetValue(2).ToString();
+                    txtCodDireccion.Text = srd.GetValue(3).ToString();
+                    txtColonia.Text = srd.GetValue(4).ToString();
+                    txtTelefono1.Text = srd.GetValue(5).ToString();
+                    txtTelefono2.Text = srd.GetValue(6).ToString();
                 }
-
-                reader.Close();
 
                 cmd = new SqlCommand("SELECT av.cod_aval, av.nom_aval, av.telefono , av.correo, de.cod_deudor " +
                     " FROM Aval av  JOIN Deudores DE on av.cod_aval = de.cod_deudor  WHERE cod_deudor = " + txtBuscarCodDeudor.Text, conexion.sc);
+                SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)
                 {
@@ -109,6 +106,8 @@ namespace Pantallas_de_Proyecto
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+
+            con3.Close();
         }
     }
 }
