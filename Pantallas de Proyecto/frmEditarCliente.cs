@@ -67,7 +67,7 @@ namespace Pantallas_de_Proyecto
             try
             {
                 SqlCommand command = new SqlCommand("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2  " +
-                    "FROM Deudores JOIN DIrecciones di ON de.cod_deudor = di.cod_direccion WHERE cod_deudor = 1 ", con3);
+                    "FROM Deudores de JOIN DIrecciones di ON de.cod_direccion = di.cod_direccion WHERE cod_deudor = '"+txtBuscarCodDeudor.Text+"' ", con3);
                 SqlDataReader srd = command.ExecuteReader();
 
                 while (srd.Read())
@@ -82,7 +82,7 @@ namespace Pantallas_de_Proyecto
                 }
 
                 cmd = new SqlCommand("SELECT av.cod_aval, av.nom_aval, av.telefono , av.correo, de.cod_deudor " +
-                    " FROM Aval av  JOIN Deudores DE on av.cod_aval = de.cod_deudor  WHERE cod_deudor = " + txtBuscarCodDeudor.Text, conexion.sc);
+                    " FROM Aval av  JOIN Deudores DE on av.cod_aval = de.cod_aval  WHERE cod_aval = '"+txtCodigoAval.Text+"' ", conexion.sc);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)

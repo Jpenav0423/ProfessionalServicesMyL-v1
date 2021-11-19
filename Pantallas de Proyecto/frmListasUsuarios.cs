@@ -61,7 +61,7 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
             conexion.CargarDatosUsuarios(dgvListaUsuarios);
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
 
         private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

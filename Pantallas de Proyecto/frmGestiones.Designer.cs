@@ -71,6 +71,8 @@ namespace Pantallas_de_Proyecto
             this.dgvReferencias = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtCodAval = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReferencias)).BeginInit();
@@ -459,7 +461,7 @@ namespace Pantallas_de_Proyecto
             // dgvReferencias
             // 
             this.dgvReferencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReferencias.Location = new System.Drawing.Point(729, 117);
+            this.dgvReferencias.Location = new System.Drawing.Point(729, 173);
             this.dgvReferencias.Name = "dgvReferencias";
             this.dgvReferencias.Size = new System.Drawing.Size(240, 214);
             this.dgvReferencias.TabIndex = 54;
@@ -467,7 +469,7 @@ namespace Pantallas_de_Proyecto
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(726, 95);
+            this.label11.Location = new System.Drawing.Point(726, 145);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(105, 13);
@@ -486,6 +488,24 @@ namespace Pantallas_de_Proyecto
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // txtCodAval
+            // 
+            this.txtCodAval.Location = new System.Drawing.Point(798, 107);
+            this.txtCodAval.Name = "txtCodAval";
+            this.txtCodAval.Size = new System.Drawing.Size(100, 20);
+            this.txtCodAval.TabIndex = 56;
+            this.txtCodAval.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(726, 110);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(67, 13);
+            this.label19.TabIndex = 57;
+            this.label19.Text = "Codigo Aval:";
+            // 
             // frmGestiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,6 +513,8 @@ namespace Pantallas_de_Proyecto
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1035, 774);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.txtCodAval);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dgvReferencias);
@@ -588,5 +610,7 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.DataGridView dgvReferencias;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtCodAval;
+        private System.Windows.Forms.Label label19;
     }
 }
