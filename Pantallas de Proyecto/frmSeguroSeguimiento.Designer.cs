@@ -49,6 +49,9 @@ namespace Pantallas_de_Proyecto
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvSeguimientos = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarCodDeudor = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimientos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -242,12 +245,45 @@ namespace Pantallas_de_Proyecto
             this.label13.TabIndex = 48;
             this.label13.Text = "Seguimientos";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Cod Direccion:";
+            // 
+            // txtBuscarCodDeudor
+            // 
+            this.txtBuscarCodDeudor.Location = new System.Drawing.Point(141, 57);
+            this.txtBuscarCodDeudor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscarCodDeudor.Name = "txtBuscarCodDeudor";
+            this.txtBuscarCodDeudor.Size = new System.Drawing.Size(98, 20);
+            this.txtBuscarCodDeudor.TabIndex = 50;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtBuscar.Location = new System.Drawing.Point(555, 197);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(112, 32);
+            this.txtBuscar.TabIndex = 51;
+            this.txtBuscar.Text = "Buscar";
+            this.txtBuscar.UseVisualStyleBackColor = false;
+            this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
+            // 
             // frmSeguroSeguimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(885, 857);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.txtBuscarCodDeudor);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dgvSeguimientos);
             this.Controls.Add(this.btnCerrar);
@@ -301,5 +337,8 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvSeguimientos;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBuscarCodDeudor;
+        private System.Windows.Forms.Button txtBuscar;
     }
 }

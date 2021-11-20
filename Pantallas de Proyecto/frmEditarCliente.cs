@@ -13,9 +13,10 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmEditarCliente : Form
     {
-        SqlConnection con3 = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL;Integrated Security=true;");
+        SqlConnection con3 = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
         clsConexion conexion = new clsConexion();
         SqlCommand cmd;
+        
         public frmEditarCliente()
         {
             InitializeComponent();
@@ -35,13 +36,14 @@ namespace Pantallas_de_Proyecto
 
                 cmd = new SqlCommand("UPDATE DIrecciones SET combre_colonia = '" + txtColonia.Text + "' WHERE cod_direccion = " + txtCodDireccion.Text + " ", conexion.sc);
                 cmd.ExecuteNonQuery();
-
-                cmd = new SqlCommand("UPDATE AVAL SET nom_aval = '" + txtNombreAval.Text + "' , telefono = '" + txtTelefonoAval.Text + "' , correo = '" + txtCorreoAval.Text + "' WHERE cod_aval = " + txtCodigoAval.Text + " ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Se han actualizado los datos de manera Exitosa", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexion.cargarDatosReferecnias(dgvAval);
-
-
+              //  MessageBox.Show("Se han actualizado los datos de manera Exitosa", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cmd = new SqlCommand("UPDATE AVAL SET nom_aval = '" + txtNombreAval.Text + "' , telefono = '" + txtTelefonoAval.Text + "' , correo = '" + txtCorreoAval.Text + "' WHERE cod_aval = '" + txtCodigoAval.Text + "' ", conexion.sc);
+                
+                 cmd.ExecuteNonQuery();
+                 MessageBox.Show("Se han actualizado los datos de manera Exitosa", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 conexion.cargarDatosReferecnias(dgvAval);
+                
+                //conexion.cargarDatosReferecnias(dgvAval);
             }
             catch(Exception ex)
             {
@@ -66,8 +68,7 @@ namespace Pantallas_de_Proyecto
             con3.Open();
             try
             {
-                SqlCommand command = new SqlCommand("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2  " +
-                    "FROM Deudores de JOIN DIrecciones di ON de.cod_direccion = di.cod_direccion WHERE cod_deudor = '"+txtBuscarCodDeudor.Text+"' ", con3);
+                SqlCommand command = new SqlCommand("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2, av.cod_aval, av.nom_aval, av.correo , av.telefono  FROM Deudores de INNER JOIN DIrecciones di ON di.cod_direccion = de.direccion INNER JOIN Aval av ON av.cod_aval=de.cod_aval WHERE de.cod_deudor = '" + txtBuscarCodDeudor.Text + "'", con3);
                 SqlDataReader srd = command.ExecuteReader();
 
                 while (srd.Read())
@@ -79,35 +80,34 @@ namespace Pantallas_de_Proyecto
                     txtColonia.Text = srd.GetValue(4).ToString();
                     txtTelefono1.Text = srd.GetValue(5).ToString();
                     txtTelefono2.Text = srd.GetValue(6).ToString();
+                    txtCodigoAval.Text = srd.GetValue(7).ToString();
+                    txtNombreAval.Text = srd.GetValue(8).ToString();
+                    txtCorreoAval.Text = srd.GetValue(9).ToString();
+                    txtTelefonoAval.Text = srd.GetValue(10).ToString();
                 }
+                
 
-                cmd = new SqlCommand("SELECT av.cod_aval, av.nom_aval, av.telefono , av.correo, de.cod_deudor " +
-                    " FROM Aval av  JOIN Deudores DE on av.cod_aval = de.cod_aval  WHERE cod_aval = '"+txtCodigoAval.Text+"' ", conexion.sc);
-                SqlDataReader reader = cmd.ExecuteReader();
+                srd.Close();
 
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        Console.WriteLine(reader.GetValue(0).ToString());
-                        txtNombreAval.Text = reader.GetValue(1).ToString();
-                        txtTelefonoAval.Text = reader.GetValue(2).ToString();
-                        txtCorreoAval.Text = reader.GetValue(3).ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("El codigo del Aval no es el correcto", "ERROR");
-                }
 
-                reader.Close();
+                cmd = new SqlCommand(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
+                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '" + txtBuscarCodDeudor.Text + "'  ", conexion.sc);
+                cmd.ExecuteNonQuery();
+                conexion.cargarDatosReferecnias(dgvAval);
 
-            }catch(Exception ex)
+
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
 
             con3.Close();
+        }
+
+        private void frmEditarCliente_Load(object sender, EventArgs e)
+        {
+            conexion.abrir();
         }
     }
 }

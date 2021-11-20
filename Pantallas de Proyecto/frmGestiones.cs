@@ -15,7 +15,7 @@ namespace Pantallas_de_Proyecto
     {
 
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL;Integrated Security=true;");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
 
         clsConexion conexion = new clsConexion();
         superClase superClase = new superClase();
@@ -79,7 +79,7 @@ namespace Pantallas_de_Proyecto
             try
             {
 
-                SqlCommand command = new SqlCommand("SELECT cod_deudor, nombre, id, RTN, telefono_1, telefono_2, correo, cod_direccion, prestamo, fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE  nombre = '"+txtBuscarNombreDeudor.Text+"' AND cod_deudor = '"+txtCodDeudorBuscar.Text+"'" , con);
+                SqlCommand command = new SqlCommand("SELECT cod_deudor, nombre, id, RTN, telefono_1, telefono_2, correo, direccion, prestamo, fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE  nombre = '"+txtBuscarNombreDeudor.Text+"' AND cod_deudor = '"+txtCodDeudorBuscar.Text+"'" , con);
                 SqlDataReader srd = command.ExecuteReader();
 
                 while (srd.Read())
@@ -100,12 +100,12 @@ namespace Pantallas_de_Proyecto
                 }
 
 
-                cmd = new SqlCommand(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor " +
-                    " FROM Aval av join Deudores de ON av.cod_aval = '"+txtCodAval.Text+"'  ", conexion.sc);
+                cmd = new SqlCommand(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
+                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '"+txtCodDeudorBuscar.Text+"'  ", conexion.sc);
                 cmd.ExecuteNonQuery();
                 conexion.cargarDatosReferecnias(dgvReferencias);
 
-                //WHERE cod_deudor = " + txtCodDeudor.Text + "
+                
             }
             catch (Exception ex)
             {

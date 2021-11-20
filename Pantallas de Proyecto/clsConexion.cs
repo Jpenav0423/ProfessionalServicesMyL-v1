@@ -16,7 +16,7 @@ namespace Pantallas_de_Proyecto
         
 
         //Conexion a la base de datos
-        string conexion = "Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL;Integrated Security=true;";
+        string conexion = "Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;";
 
         public SqlConnection sc = new SqlConnection();
 
@@ -156,11 +156,11 @@ namespace Pantallas_de_Proyecto
             }
         }
 
-        public void mostrarCaracterizaciones(DataGridView dgv)
+        public void mostrarCaracterizacion1(DataGridView dgv)
         {
             try
             {
-                da = new SqlDataAdapter("SELECT * FROM clientes", sc);
+                da = new SqlDataAdapter("SELECT * FROM Caracterizacion_1", sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -171,6 +171,39 @@ namespace Pantallas_de_Proyecto
             }
 
         }
+
+        public void mostrarCaracterizacion2(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM Caracterizacion_2", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+
+        }
+
+        public void mostrarCaracterizacion3(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM Caracterizacion_3", sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+
+        }
+
 
         public void mostrarDatosGestionesDia(DataGridView dgv)
         {
@@ -204,45 +237,12 @@ namespace Pantallas_de_Proyecto
             }
         }
         
-        /*
-        public string mostarDatoGestiones()
-        {
-            
-
-            //return mostarDatoGestiones();
-
-            
-            string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
-                   "deuda_total, fecha_ultimo_pago, fecha_atraso" +
-                   " FROM Deudores Order By cod_deudor ";
-
-            SqlCommand cmd = new SqlCommand(query);
-
-            SqlDataReader reader = cmd.ExecuteReader();
-            
-
-            if (reader.Read())
-            {
-               return reader["cod_deudor, nombre, id, RTN, telefono_1 , telefono_2, cod_direccion, prestamo," +
-                           " fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso "].ToString();
-            }
-           else
-            {
-                reader.Close();
-                sc.Close();
-                return ("NULL");
- 
-            }
-        }
-
-        */
 
         public void cargarDatosReferecnias(DataGridView dgv)
         {
             try
             {
-                da = new SqlDataAdapter("SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor " +
-                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_deudor WHERE cod_deudor = 1 ORDER BY cod_deudor ",sc);
+                da = new SqlDataAdapter("SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre  FROM Aval av JOIN Deudores de ON av.cod_aval = de.cod_aval ",sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -294,6 +294,22 @@ namespace Pantallas_de_Proyecto
             }
         }
 
+
+        public void cargarDatosAval(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("av.cod_aval , av.nom_aval, av.telefono, av.correo ,de.cod_deudor, de.nombre " +
+                    " FROM Aval av JOIN Deudores de ON av.cod_aval = de.cod_aval ",sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR, NO SE LOGRARON CARGAR LOS DATOS  " + ex, "ERROR", MessageBoxButtons.OK);
+            }
+        }
 
 
 

@@ -29,80 +29,39 @@ namespace Pantallas_de_Proyecto
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Caracterizacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Caracterizacion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Caracterizacion3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCarac1 = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvCarac2 = new System.Windows.Forms.DataGridView();
+            this.dgvCarac3 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarac1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarac2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarac3)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dgvCarac1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(282, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Caracterizaciones";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(285, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(417, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Caracterizacion1,
-            this.Caracterizacion2,
-            this.Caracterizacion3});
-            this.dataGridView1.Location = new System.Drawing.Point(271, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(897, 513);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // Caracterizacion1
-            // 
-            this.Caracterizacion1.HeaderText = "Caracterizacion 1";
-            this.Caracterizacion1.MinimumWidth = 6;
-            this.Caracterizacion1.Name = "Caracterizacion1";
-            this.Caracterizacion1.Width = 300;
-            // 
-            // Caracterizacion2
-            // 
-            this.Caracterizacion2.HeaderText = "Caracterizacion 2";
-            this.Caracterizacion2.MinimumWidth = 6;
-            this.Caracterizacion2.Name = "Caracterizacion2";
-            this.Caracterizacion2.Width = 300;
-            // 
-            // Caracterizacion3
-            // 
-            this.Caracterizacion3.HeaderText = "Caracterizacion 3";
-            this.Caracterizacion3.MinimumWidth = 6;
-            this.Caracterizacion3.Name = "Caracterizacion3";
-            this.Caracterizacion3.Width = 300;
+            this.dgvCarac1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarac1.Location = new System.Drawing.Point(203, 97);
+            this.dgvCarac1.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCarac1.Name = "dgvCarac1";
+            this.dgvCarac1.RowHeadersWidth = 51;
+            this.dgvCarac1.RowTemplate.Height = 24;
+            this.dgvCarac1.Size = new System.Drawing.Size(671, 160);
+            this.dgvCarac1.TabIndex = 2;
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCancelar.Location = new System.Drawing.Point(46, 605);
+            this.btnCancelar.Location = new System.Drawing.Point(34, 492);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 104);
+            this.btnCancelar.Size = new System.Drawing.Size(112, 84);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -114,18 +73,21 @@ namespace Pantallas_de_Proyecto
             this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.btnCancelar);
             this.groupBox3.Controls.Add(this.btnBuscar);
-            this.groupBox3.Location = new System.Drawing.Point(3, 1);
+            this.groupBox3.Location = new System.Drawing.Point(2, 1);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(262, 888);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(196, 722);
             this.groupBox3.TabIndex = 119;
             this.groupBox3.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 144);
+            this.pictureBox1.Size = new System.Drawing.Size(158, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -133,57 +95,82 @@ namespace Pantallas_de_Proyecto
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBuscar.Location = new System.Drawing.Point(55, 196);
+            this.btnBuscar.Location = new System.Drawing.Point(41, 159);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(150, 104);
+            this.btnBuscar.Size = new System.Drawing.Size(112, 84);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Wide Latin", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(294, 34);
+            this.label6.Location = new System.Drawing.Point(220, 28);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(405, 21);
+            this.label6.Size = new System.Drawing.Size(336, 18);
             this.label6.TabIndex = 120;
             this.label6.Text = "Buscar Caracterizaciones";
             // 
-            // Form15
+            // dgvCarac2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.dgvCarac2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarac2.Location = new System.Drawing.Point(203, 288);
+            this.dgvCarac2.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCarac2.Name = "dgvCarac2";
+            this.dgvCarac2.RowHeadersWidth = 51;
+            this.dgvCarac2.RowTemplate.Height = 24;
+            this.dgvCarac2.Size = new System.Drawing.Size(671, 160);
+            this.dgvCarac2.TabIndex = 121;
+            // 
+            // dgvCarac3
+            // 
+            this.dgvCarac3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarac3.Location = new System.Drawing.Point(202, 470);
+            this.dgvCarac3.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCarac3.Name = "dgvCarac3";
+            this.dgvCarac3.RowHeadersWidth = 51;
+            this.dgvCarac3.RowTemplate.Height = 24;
+            this.dgvCarac3.Size = new System.Drawing.Size(671, 160);
+            this.dgvCarac3.TabIndex = 122;
+            // 
+            // frmCaracterizacion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1180, 1055);
+            this.ClientSize = new System.Drawing.Size(885, 857);
+            this.Controls.Add(this.dgvCarac3);
+            this.Controls.Add(this.dgvCarac2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "Form15";
+            this.Controls.Add(this.dgvCarac1);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmCaracterizacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caracterización";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmCaracterizacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarac1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarac2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarac3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Caracterizacion3;
+        private System.Windows.Forms.DataGridView dgvCarac1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgvCarac2;
+        private System.Windows.Forms.DataGridView dgvCarac3;
     }
 }

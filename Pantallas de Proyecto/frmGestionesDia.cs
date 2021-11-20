@@ -13,6 +13,7 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmGestionesDia : Form
     {
+        
         public frmGestionesDia()
         {
             InitializeComponent();
@@ -23,8 +24,11 @@ namespace Pantallas_de_Proyecto
         private void Form16_Load(object sender, EventArgs e)
         {
             conexion.abrir();
-            conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+             conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+  
         }
+
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

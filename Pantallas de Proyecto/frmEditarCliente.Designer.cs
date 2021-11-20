@@ -71,7 +71,7 @@ namespace Pantallas_de_Proyecto
             // txtColonia
             // 
             this.txtColonia.Location = new System.Drawing.Point(321, 288);
-            this.txtColonia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtColonia.Margin = new System.Windows.Forms.Padding(2);
             this.txtColonia.Name = "txtColonia";
             this.txtColonia.Size = new System.Drawing.Size(296, 20);
             this.txtColonia.TabIndex = 71;
@@ -89,7 +89,7 @@ namespace Pantallas_de_Proyecto
             // txtCodDireccion
             // 
             this.txtCodDireccion.Location = new System.Drawing.Point(321, 251);
-            this.txtCodDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodDireccion.Name = "txtCodDireccion";
             this.txtCodDireccion.Size = new System.Drawing.Size(296, 20);
             this.txtCodDireccion.TabIndex = 69;
@@ -108,7 +108,7 @@ namespace Pantallas_de_Proyecto
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(321, 216);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(296, 20);
             this.txtCorreo.TabIndex = 67;
@@ -126,7 +126,7 @@ namespace Pantallas_de_Proyecto
             // txtTelefono2
             // 
             this.txtTelefono2.Location = new System.Drawing.Point(729, 178);
-            this.txtTelefono2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono2.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(102, 20);
             this.txtTelefono2.TabIndex = 65;
@@ -144,7 +144,7 @@ namespace Pantallas_de_Proyecto
             // txtTelefono1
             // 
             this.txtTelefono1.Location = new System.Drawing.Point(729, 151);
-            this.txtTelefono1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono1.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(102, 20);
             this.txtTelefono1.TabIndex = 63;
@@ -162,7 +162,7 @@ namespace Pantallas_de_Proyecto
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(321, 182);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(296, 20);
             this.txtID.TabIndex = 59;
@@ -180,7 +180,7 @@ namespace Pantallas_de_Proyecto
             // txtBuscarCodDeudor
             // 
             this.txtBuscarCodDeudor.Location = new System.Drawing.Point(108, 28);
-            this.txtBuscarCodDeudor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarCodDeudor.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarCodDeudor.Name = "txtBuscarCodDeudor";
             this.txtBuscarCodDeudor.Size = new System.Drawing.Size(253, 20);
             this.txtBuscarCodDeudor.TabIndex = 57;
@@ -198,7 +198,7 @@ namespace Pantallas_de_Proyecto
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(321, 154);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(296, 20);
             this.txtNombre.TabIndex = 55;
@@ -421,10 +421,11 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEditarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Datos:";
+            this.Load += new System.EventHandler(this.frmEditarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAval)).EndInit();
