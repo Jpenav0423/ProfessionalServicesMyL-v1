@@ -46,7 +46,7 @@ namespace Pantallas_de_Proyecto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           if(cmbBusqueda.SelectedIndex == 0)
+            if (cmbBusqueda.SelectedIndex == 0)
             {
                 try
                 {

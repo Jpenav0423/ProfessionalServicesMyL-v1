@@ -254,14 +254,6 @@ namespace Pantallas_de_Proyecto
 
         }
 
-        public void cargarDatosGestiones()
-        {
-            string query = "SELECT cod_deudor, nombre, id, RTN , telefono_1, telefono_2, correo, cod_direccion, prestamo , fecha_pago, " +
-                   "deuda_total, fecha_ultimo_pago, fecha_atraso" +
-                   " FROM Deudores Order By cod_deudor ";
-            SqlCommand cmd = new SqlCommand(query);
-  
-        }
 
         public void cargarDatosSeguro()
         {
