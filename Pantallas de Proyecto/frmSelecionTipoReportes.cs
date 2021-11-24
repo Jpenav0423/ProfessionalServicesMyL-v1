@@ -19,6 +19,8 @@ namespace Pantallas_de_Proyecto
 
         private void rbnLegalCliente_CheckedChanged(object sender, EventArgs e)
         {
+            frmNotificacion1 frmN1 = new frmNotificacion1();
+            frmN1.Show();
             
 
         }
@@ -27,15 +29,15 @@ namespace Pantallas_de_Proyecto
         {
             frmReporteRequerimientoLegalAVAL frmRLA = new frmReporteRequerimientoLegalAVAL();
             frmRLA.Show();
-            this.Hide();
+            
         }
 
         private void rbnEmbargo_CheckedChanged(object sender, EventArgs e)
         {
+
+            frmAvisodeEmbargo frmAE = new frmAvisodeEmbargo();
+            frmAE.Show();
             
-            frmTipoReporte frm12 = new frmTipoReporte();
-            frm12.Show();
-            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -57,6 +59,13 @@ namespace Pantallas_de_Proyecto
             frmReportes frm9 = new frmReportes();
             frm9.Show();
             this.Hide();
+        }
+
+        private void rdbRequerimientolegal2_CheckedChanged(object sender, EventArgs e)
+        {
+           frmNotificacion2 frmN2 = new frmNotificacion2();
+            frmN2.Show();
+            
         }
     }
 }

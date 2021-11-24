@@ -13,7 +13,7 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmEditarCliente : Form
     {
-        SqlConnection con3 = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
+        SqlConnection con3 = new SqlConnection("Data Source=DESKTOP-L6PQCB1;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
         clsConexion conexion = new clsConexion();
         SqlCommand cmd;
         

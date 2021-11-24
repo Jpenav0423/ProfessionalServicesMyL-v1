@@ -1,7 +1,7 @@
 ﻿
 namespace Pantallas_de_Proyecto
 {
-    partial class frmReporteRequerimientoLegalAVAL
+    partial class frmNotificacion1
     {
         /// <summary>
         /// Required designer variable.
@@ -35,23 +35,23 @@ namespace Pantallas_de_Proyecto
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_de_Proyecto.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_de_Proyecto.Report3.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1180, 1055);
             this.reportViewer1.TabIndex = 0;
             // 
-            // frmReporteRequerimientoLegalAVAL
+            // frmNotificacion1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 1055);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmReporteRequerimientoLegalAVAL";
+            this.Name = "frmNotificacion1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReporteRequerimientoLegalAVAL";
-            this.Load += new System.EventHandler(this.frmReporteRequerimientoLegalAVAL_Load);
+            this.Text = "frmNotificacion1";
+            this.Load += new System.EventHandler(this.frmNotificacion1_Load);
             this.ResumeLayout(false);
 
         }

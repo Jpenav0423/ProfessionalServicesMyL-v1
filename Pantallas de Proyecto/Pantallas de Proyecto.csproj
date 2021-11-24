@@ -65,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsConexion.cs" />
+    <Compile Include="frmAvisodeEmbargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisodeEmbargo.Designer.cs">
+      <DependentUpon>frmAvisodeEmbargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,18 @@
     </Compile>
     <Compile Include="frmListaEmpresas.Designer.cs">
       <DependentUpon>frmListaEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotificacion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotificacion1.Designer.cs">
+      <DependentUpon>frmNotificacion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotificacion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotificacion2.Designer.cs">
+      <DependentUpon>frmNotificacion2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReporteRequerimientoLegalAVAL.cs">
       <SubType>Form</SubType>
@@ -189,6 +207,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="superClase.cs" />
+    <EmbeddedResource Include="frmAvisodeEmbargo.resx">
+      <DependentUpon>frmAvisodeEmbargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaEmpresas.resx">
       <DependentUpon>frmListaEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotificacion1.resx">
+      <DependentUpon>frmNotificacion1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotificacion2.resx">
+      <DependentUpon>frmNotificacion2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteRequerimientoLegalAVAL.resx">
       <DependentUpon>frmReporteRequerimientoLegalAVAL.cs</DependentUpon>
@@ -260,6 +287,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

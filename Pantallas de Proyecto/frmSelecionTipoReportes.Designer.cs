@@ -31,6 +31,7 @@ namespace Pantallas_de_Proyecto
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbRequerimientolegal2 = new System.Windows.Forms.RadioButton();
             this.rbnEmbargo = new System.Windows.Forms.RadioButton();
             this.rbnLegalAval = new System.Windows.Forms.RadioButton();
             this.rbnLegalCliente = new System.Windows.Forms.RadioButton();
@@ -47,7 +48,6 @@ namespace Pantallas_de_Proyecto
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rdbRequerimientolegal2 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,6 +75,17 @@ namespace Pantallas_de_Proyecto
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de Requerimientos";
+            // 
+            // rdbRequerimientolegal2
+            // 
+            this.rdbRequerimientolegal2.AutoSize = true;
+            this.rdbRequerimientolegal2.Location = new System.Drawing.Point(24, 89);
+            this.rdbRequerimientolegal2.Name = "rdbRequerimientolegal2";
+            this.rdbRequerimientolegal2.Size = new System.Drawing.Size(242, 21);
+            this.rdbRequerimientolegal2.TabIndex = 3;
+            this.rdbRequerimientolegal2.Text = "Requerimeinto Legal del Cliente 2";
+            this.rdbRequerimientolegal2.UseVisualStyleBackColor = true;
+            this.rdbRequerimientolegal2.CheckedChanged += new System.EventHandler(this.rdbRequerimientolegal2_CheckedChanged);
             // 
             // rbnEmbargo
             // 
@@ -232,16 +243,6 @@ namespace Pantallas_de_Proyecto
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // rdbRequerimientolegal2
-            // 
-            this.rdbRequerimientolegal2.AutoSize = true;
-            this.rdbRequerimientolegal2.Location = new System.Drawing.Point(24, 89);
-            this.rdbRequerimientolegal2.Name = "rdbRequerimientolegal2";
-            this.rdbRequerimientolegal2.Size = new System.Drawing.Size(242, 21);
-            this.rdbRequerimientolegal2.TabIndex = 3;
-            this.rdbRequerimientolegal2.Text = "Requerimeinto Legal del Cliente 2";
-            this.rdbRequerimientolegal2.UseVisualStyleBackColor = true;
             // 
             // frmSelecionTipoReportes
             // 
