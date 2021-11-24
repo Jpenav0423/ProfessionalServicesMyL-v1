@@ -35,7 +35,7 @@ namespace Pantallas_de_Proyecto
                 {
                     cmd = new SqlCommand("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2 " +
                         " FROM Deudores de JOIN DIrecciones di  ON de.cod_deudor = di.cod_direccion WHERE nombre = '" + txtBuscar.Text + "' ", conexion.sc);
-                    cmd.ExecuteNonQuery();
+                   // cmd.ExecuteNonQuery();
                     conexion.CargarDatosSeguroSocial(dgvSeguroSocial);
                 }
                 catch(Exception ex)

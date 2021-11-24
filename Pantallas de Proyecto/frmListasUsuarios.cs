@@ -107,7 +107,6 @@ namespace Pantallas_de_Proyecto
             txtUsuario.Clear();
             txtContraseña.Clear();
             txtEstado.Clear();
-            txtNombreGestor.Clear();
 
             cmbNivelUser.SelectedIndex = -1;
 

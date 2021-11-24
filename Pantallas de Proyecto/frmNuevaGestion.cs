@@ -12,6 +12,8 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmNuevaGestion : Form
     {
+        public string codDeudor;
+        public string nombreDeudor;
         public frmNuevaGestion()
         {
             InitializeComponent();
@@ -40,8 +42,14 @@ namespace Pantallas_de_Proyecto
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             frmGestiones frm3 = new frmGestiones();
+            frm3.buscarDeudor(codDeudor, nombreDeudor);
             frm3.Show();
             this.Hide();
+        }
+
+        private void frmNuevaGestion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

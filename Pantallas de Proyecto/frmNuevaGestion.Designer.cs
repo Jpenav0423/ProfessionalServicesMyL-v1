@@ -58,7 +58,7 @@ namespace Pantallas_de_Proyecto
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(339, 155);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(296, 20);
             this.textBox9.TabIndex = 36;
@@ -66,7 +66,7 @@ namespace Pantallas_de_Proyecto
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(339, 123);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(296, 20);
             this.textBox5.TabIndex = 34;
@@ -74,7 +74,7 @@ namespace Pantallas_de_Proyecto
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(339, 90);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(296, 20);
             this.textBox3.TabIndex = 32;
@@ -113,7 +113,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Location = new System.Drawing.Point(39, 161);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 91);
             this.button1.TabIndex = 39;
@@ -145,7 +145,7 @@ namespace Pantallas_de_Proyecto
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(608, 212);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 42;
@@ -153,7 +153,7 @@ namespace Pantallas_de_Proyecto
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(788, 216);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 43;
@@ -161,7 +161,7 @@ namespace Pantallas_de_Proyecto
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(236, 278);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(629, 140);
@@ -191,7 +191,7 @@ namespace Pantallas_de_Proyecto
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(236, 462);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(234, 20);
             this.textBox6.TabIndex = 47;
@@ -213,7 +213,7 @@ namespace Pantallas_de_Proyecto
             "No ",
             "Si"});
             this.comboBox1.Location = new System.Drawing.Point(606, 460);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(258, 21);
             this.comboBox1.TabIndex = 49;
@@ -222,7 +222,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnGuardarYSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGuardarYSalir.Location = new System.Drawing.Point(39, 296);
-            this.btnGuardarYSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarYSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarYSalir.Name = "btnGuardarYSalir";
             this.btnGuardarYSalir.Size = new System.Drawing.Size(124, 86);
             this.btnGuardarYSalir.TabIndex = 50;
@@ -234,7 +234,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelar.Location = new System.Drawing.Point(39, 424);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(124, 86);
             this.btnCancelar.TabIndex = 51;
@@ -261,9 +261,9 @@ namespace Pantallas_de_Proyecto
             this.groupBox1.Controls.Add(this.btnGuardarYSalir);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Location = new System.Drawing.Point(1, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(196, 722);
             this.groupBox1.TabIndex = 68;
             this.groupBox1.TabStop = false;
@@ -272,7 +272,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
             this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -284,7 +284,7 @@ namespace Pantallas_de_Proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(885, 857);
+            this.ClientSize = new System.Drawing.Size(885, 749);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox1);
@@ -303,10 +303,11 @@ namespace Pantallas_de_Proyecto
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNuevaGestion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Gestion";
+            this.Load += new System.EventHandler(this.frmNuevaGestion_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

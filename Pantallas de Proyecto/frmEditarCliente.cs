@@ -13,7 +13,7 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmEditarCliente : Form
     {
-        SqlConnection con3 = new SqlConnection("Data Source=DESKTOP-L6PQCB1;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
+        SqlConnection con3 = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
         clsConexion conexion = new clsConexion();
         SqlCommand cmd;
         
@@ -36,14 +36,14 @@ namespace Pantallas_de_Proyecto
 
                 cmd = new SqlCommand("UPDATE DIrecciones SET combre_colonia = '" + txtColonia.Text + "' WHERE cod_direccion = " + txtCodDireccion.Text + " ", conexion.sc);
                 cmd.ExecuteNonQuery();
-              //  MessageBox.Show("Se han actualizado los datos de manera Exitosa", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              
                 cmd = new SqlCommand("UPDATE AVAL SET nom_aval = '" + txtNombreAval.Text + "' , telefono = '" + txtTelefonoAval.Text + "' , correo = '" + txtCorreoAval.Text + "' WHERE cod_aval = '" + txtCodigoAval.Text + "' ", conexion.sc);
                 
                  cmd.ExecuteNonQuery();
                  MessageBox.Show("Se han actualizado los datos de manera Exitosa", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  conexion.cargarDatosReferecnias(dgvAval);
                 
-                //conexion.cargarDatosReferecnias(dgvAval);
+                
             }
             catch(Exception ex)
             {
@@ -65,6 +65,9 @@ namespace Pantallas_de_Proyecto
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
+            SqlDataAdapter da;
+            DataTable dt;
+
             con3.Open();
             try
             {
@@ -90,12 +93,11 @@ namespace Pantallas_de_Proyecto
                 srd.Close();
 
 
-                cmd = new SqlCommand(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
+                da = new SqlDataAdapter(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
                     " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '" + txtBuscarCodDeudor.Text + "'  ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                conexion.cargarDatosReferecnias(dgvAval);
-
-
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvAval.DataSource =  dt;
             }
             catch(Exception ex)
             {

@@ -240,3 +240,6 @@ C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmAvisodeEmbargo.resources
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNotificacion1.resources
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNotificacion2.resources
+C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmAvisodeEmbargo.resources
+C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNotificacion1.resources
+C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNotificacion2.resources

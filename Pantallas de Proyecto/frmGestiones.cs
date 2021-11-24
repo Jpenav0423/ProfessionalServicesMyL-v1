@@ -15,15 +15,17 @@ namespace Pantallas_de_Proyecto
     {
 
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-L6PQCB1;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
+        SqlConnection con; 
 
-        clsConexion conexion = new clsConexion();
-        superClase superClase = new superClase();
+        clsConexion conexion; 
+        superClase superClase; 
         SqlCommand cmd;
         public frmGestiones()
         {
+            conexion = new clsConexion();
+            superClase = new superClase();
             InitializeComponent();
-
+            con = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,6 +36,8 @@ namespace Pantallas_de_Proyecto
         private void btnNuevaGestion_Click(object sender, EventArgs e)
         {
             frmNuevaGestion frm6 = new frmNuevaGestion();
+            frm6.codDeudor = txtCodDeudorBuscar.Text;
+            frm6.nombreDeudor = txtBuscarNombreDeudor.Text;
             frm6.Show();
             this.Hide();
         }
@@ -74,12 +78,20 @@ namespace Pantallas_de_Proyecto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            buscarDeudor(txtCodDeudorBuscar.Text,txtBuscarNombreDeudor.Text);   
+        }
+
+        public void buscarDeudor(string codigoDeudor,string nombreDeudor)
+        {
+
+            SqlDataAdapter da;
+            DataTable dt;
             con.Open();
-           
+
             try
             {
 
-                SqlCommand command = new SqlCommand("SELECT cod_deudor, nombre, id, RTN, telefono_1, telefono_2, correo, direccion, prestamo, fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE  nombre = '"+txtBuscarNombreDeudor.Text+"' AND cod_deudor = '"+txtCodDeudorBuscar.Text+"'" , con);
+                SqlCommand command = new SqlCommand("SELECT cod_deudor, nombre, id, RTN, telefono_1, telefono_2, correo, direccion, prestamo, fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE  nombre = '" + nombreDeudor + "' AND cod_deudor = '" + codigoDeudor + "'", con);
                 SqlDataReader srd = command.ExecuteReader();
 
                 while (srd.Read())
@@ -100,12 +112,13 @@ namespace Pantallas_de_Proyecto
                 }
 
 
-                cmd = new SqlCommand(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
-                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '"+txtCodDeudorBuscar.Text+"'  ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                conexion.cargarDatosReferecnias(dgvReferencias);
+                da =  new SqlDataAdapter(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
+                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '" + txtCodDeudorBuscar.Text + "'  ", conexion.sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvReferencias.DataSource = dt;
 
-                
+
             }
             catch (Exception ex)
             {

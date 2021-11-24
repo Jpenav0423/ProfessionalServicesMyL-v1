@@ -13,6 +13,8 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmGestionesDia : Form
     {
+
+
         
         public frmGestionesDia()
         {
@@ -46,14 +48,20 @@ namespace Pantallas_de_Proyecto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
+            SqlDataAdapter da;
+            DataTable dt;
+
             if (cmbBusqueda.SelectedIndex == 0)
             {
                 try
                 {
-                    cmd = new SqlCommand("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                    da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
                         "FROM Deudores WHERE cod_deudor = '"+txtBuscar.Text+"' ", conexion.sc);
-                    cmd.ExecuteNonQuery();
-                    conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+                    //cmd.ExecuteNonQuery();
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvGestionesDia.DataSource =  dt;
 
                 }catch(Exception ex)
                 {
@@ -64,26 +72,29 @@ namespace Pantallas_de_Proyecto
 
             else if(cmbBusqueda.SelectedIndex == 1)
             {
-                cmd = new SqlCommand("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
-                        "FROM Deudores WHERE nombre = '" + txtBuscar.Text + "' ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                        "FROM Deudores WHERE nombre = '" + txtBuscar.Text + "' ",conexion.sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvGestionesDia.DataSource = dt;
             }
 
            else if(cmbBusqueda.SelectedIndex == 2)
             {
-                cmd = new SqlCommand("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
                     "FROM Deudores WHERE ID = '" + txtBuscar.Text + "' ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvGestionesDia.DataSource = dt;
             }
 
             else
             {
-                cmd = new SqlCommand("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
                     "FROM Deudores WHERE telefono_1 = '" + txtBuscar.Text + "' OR telefono_2 = '" + txtBuscar.Text + "' OR  telefono_3 = '" + txtBuscar.Text + "' ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvGestionesDia.DataSource = dt;
             }
         }
     }
