@@ -19,16 +19,14 @@ namespace Pantallas_de_Proyecto
 
         private void rbnLegalCliente_CheckedChanged(object sender, EventArgs e)
         {
-            frmTipoReporte frm12 = new frmTipoReporte();
-            frm12.Show();
-            this.Hide();
+            
 
         }
 
         private void rbnLegalAval_CheckedChanged(object sender, EventArgs e)
         {
-            frmTipoReporte frm12 = new frmTipoReporte();
-            frm12.Show();
+            frmReporteRequerimientoLegalAVAL frmRLA = new frmReporteRequerimientoLegalAVAL();
+            frmRLA.Show();
             this.Hide();
         }
 
