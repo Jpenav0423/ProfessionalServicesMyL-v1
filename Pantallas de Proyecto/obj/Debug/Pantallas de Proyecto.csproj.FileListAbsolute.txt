@@ -176,3 +176,6 @@ C:\repos-git\Pantallas de Proyecto\bin\Debug\pt\Microsoft.ReportViewer.WinForms.
 C:\repos-git\Pantallas de Proyecto\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\repos-git\Pantallas de Proyecto\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\repos-git\Pantallas de Proyecto\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmReporteRequerimientoLegalAVAL.resources
+C:\repos-git\Pantallas de Proyecto\obj\Debug\RdlCompile.cache
+C:\repos-git\Pantallas de Proyecto\obj\Debug\RdlCompile.compiled
