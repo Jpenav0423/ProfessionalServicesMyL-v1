@@ -275,7 +275,7 @@ namespace Pantallas_de_Proyecto
             try
             {
                 da = new SqlDataAdapter("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2 " +
-                    " FROM Deudores de JOIN DIrecciones di  ON de.cod_deudor = di.cod_direccion WHERE cod_deudor = 1", sc);
+                    " FROM Deudores de JOIN DIrecciones di  ON de.direccion = di.cod_direccion ", sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;

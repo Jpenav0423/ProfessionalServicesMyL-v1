@@ -42,7 +42,7 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                cmd = new SqlCommand("SELECT * FROM Contactos WHERE cod_contacto = " + txtCodContacto.Text, conexion.sc);
+                cmd = new SqlCommand("SELECT * FROM Contactos WHERE cod_contacto = '"+txtCodContacto.Text+"' ", conexion.sc);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)
@@ -73,7 +73,7 @@ namespace Pantallas_de_Proyecto
             try
             {
                 cmd = new SqlCommand("INSERT INTO Contactos (cod_contacto, nombre , telefono, nota ) " +
-                    "VALUES (" + txtCodContacto.Text + " , '" + txtNombreEmpresa.Text + "' , '" + txtTelefono.Text + "' , '" + txtNota.Text + "')", conexion.sc);
+                    "VALUES ('" + txtCodContacto.Text + "' , '" + txtNombreEmpresa.Text + "' , '" + txtTelefono.Text + "' , '" + txtNota.Text + "')", conexion.sc);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Se han agregado los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
@@ -89,9 +89,9 @@ namespace Pantallas_de_Proyecto
             try
             {
                 cmd = new SqlCommand("UPDATE Contactos SET nombre = '" + txtNombreEmpresa.Text + "' , telefono = '" + txtTelefono.Text + "' , nota = '" + txtNota.Text + "' " +
-                    " WHERE cod_contacto = " + txtCodContacto.Text + " ", conexion.sc);
+                    " WHERE cod_contacto = '"+txtCodContacto.Text+"' ", conexion.sc);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Se han actualiazdo los Datos con Exito", "INFORMACIN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se han actualiazdo los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
             }
             catch (Exception ex)
@@ -102,14 +102,18 @@ namespace Pantallas_de_Proyecto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            SqlDataAdapter da;
+            DataTable dt;
+
             if (cmbBuscar.SelectedIndex == 0)
             {
                 try
                 {
-                    cmd = new SqlCommand("SELECT cod_contacto, nombre, telefono, nota" +
+                    da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota" +
                         " FROM Contactos WHERE nombre = '" + txtBuscar.Text + "' ", conexion.sc);
-                    cmd.ExecuteNonQuery();
-                    conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvListaEmpresA.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
@@ -121,10 +125,11 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    cmd = new SqlCommand("SELECT cod_contacto, nombre, telefono, nota FROM Contactos " +
+                    da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota FROM Contactos " +
                         "WHERE telefono = '" + txtBuscar.Text + "'  ", conexion.sc);
-                    cmd.ExecuteNonQuery();
-                    conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvListaEmpresA.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
