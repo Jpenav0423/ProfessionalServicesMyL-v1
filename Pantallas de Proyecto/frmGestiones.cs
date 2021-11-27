@@ -13,8 +13,6 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmGestiones : Form
     {
-
-
         SqlConnection con; 
 
         clsConexion conexion; 
@@ -61,6 +59,8 @@ namespace Pantallas_de_Proyecto
         private void btnSeguroYSeguimientos_Click(object sender, EventArgs e)
         {
             frmSeguroSeguimiento frm4 = new frmSeguroSeguimiento();
+            frm4.codDeudor = txtCodDeudorBuscar.Text;
+            frm4.nombreDeudor = txtBuscarNombreDeudor.Text;
             frm4.Show();
             this.Hide();
 
@@ -75,10 +75,10 @@ namespace Pantallas_de_Proyecto
                 btnEditarDatos.Visible = false;
             }
         }
-
+        
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            buscarDeudor(txtCodDeudorBuscar.Text,txtBuscarNombreDeudor.Text);   
+            buscarDeudor(txtCodDeudorBuscar.Text, txtBuscarNombreDeudor.Text);
         }
 
         public void buscarDeudor(string codigoDeudor,string nombreDeudor)
@@ -90,36 +90,45 @@ namespace Pantallas_de_Proyecto
 
             try
             {
-
-                SqlCommand command = new SqlCommand("SELECT cod_deudor, nombre, id, RTN, telefono_1, telefono_2, correo, direccion, prestamo, fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE  nombre = '" + nombreDeudor + "' AND cod_deudor = '" + codigoDeudor + "'", con);
-                SqlDataReader srd = command.ExecuteReader();
-
-                while (srd.Read())
+                if (txtBuscarNombreDeudor.Text == " " || txtCodDeudorBuscar.Text == " ")
                 {
-                    txtCodDeudor.Text = srd.GetValue(0).ToString();
-                    txtNombre.Text = srd.GetValue(1).ToString();
-                    txtId.Text = srd.GetValue(2).ToString();
-                    txtRtn.Text = srd.GetValue(3).ToString();
-                    txtNumTelefono1.Text = srd.GetValue(4).ToString();
-                    txtNumTelefono2.Text = srd.GetValue(5).ToString();
-                    txtCorreo.Text = srd.GetValue(6).ToString();
-                    txtCodDireccion.Text = srd.GetValue(7).ToString();
-                    txtPrestamo.Text = srd.GetValue(8).ToString();
-                    txtFechaPago.Text = srd.GetValue(9).ToString();
-                    txtSaldoTotal.Text = srd.GetValue(10).ToString();
-                    txtFechaUltimoPago.Text = srd.GetValue(11).ToString();
-                    txtFechaAtraso.Text = srd.GetValue(12).ToString();
+                    MessageBox.Show("Error no se aceptan datos en blanco");
+                }
+                else
+                {
+                    SqlCommand command = new SqlCommand("SELECT cod_deudor, nombre, id, RTN, telefono_1, telefono_2, correo, direccion, prestamo, fecha_pago, deuda_total, fecha_ultimo_pago, fecha_atraso FROM Deudores WHERE  nombre = '" + nombreDeudor + "' AND cod_deudor = '" + codigoDeudor + "'", con);
+                    SqlDataReader srd = command.ExecuteReader();
+                    command.Parameters.AddWithValue("cod_deudor", codigoDeudor);
+                    command.Parameters.AddWithValue("nombre", nombreDeudor);
+
+                    while (srd.Read())
+                    {
+                        txtCodDeudor.Text = srd.GetValue(0).ToString();
+                        txtNombre.Text = srd.GetValue(1).ToString();
+                        txtId.Text = srd.GetValue(2).ToString();
+                        txtRtn.Text = srd.GetValue(3).ToString();
+                        txtNumTelefono1.Text = srd.GetValue(4).ToString();
+                        txtNumTelefono2.Text = srd.GetValue(5).ToString();
+                        txtCorreo.Text = srd.GetValue(6).ToString();
+                        txtCodDireccion.Text = srd.GetValue(7).ToString();
+                        txtPrestamo.Text = srd.GetValue(8).ToString();
+                        txtFechaPago.Text = srd.GetValue(9).ToString();
+                        txtSaldoTotal.Text = srd.GetValue(10).ToString();
+                        txtFechaUltimoPago.Text = srd.GetValue(11).ToString();
+                        txtFechaAtraso.Text = srd.GetValue(12).ToString();
+                    }
+
+
+                    da = new SqlDataAdapter(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
+                        " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '" + txtCodDeudorBuscar.Text + "'  ", conexion.sc);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvReferencias.DataSource = dt;
                 }
 
-
-                da =  new SqlDataAdapter(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
-                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '" + txtCodDeudorBuscar.Text + "'  ", conexion.sc);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgvReferencias.DataSource = dt;
-
-
             }
+
+                
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());

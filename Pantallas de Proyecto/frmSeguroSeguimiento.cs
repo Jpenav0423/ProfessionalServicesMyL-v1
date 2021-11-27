@@ -13,6 +13,9 @@ namespace Pantallas_de_Proyecto
 {
     public partial class frmSeguroSeguimiento : Form
     {
+        public string codDeudor;
+        public string nombreDeudor;
+
         SqlConnection con2 = new SqlConnection("Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;");
         clsConexion conexion = new clsConexion();
         SqlCommand cmd;
@@ -29,6 +32,7 @@ namespace Pantallas_de_Proyecto
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             frmGestiones fmr3 = new frmGestiones();
+            fmr3.buscarDeudor(codDeudor, nombreDeudor);
             fmr3.Show();
             this.Close();
         }
@@ -41,21 +45,29 @@ namespace Pantallas_de_Proyecto
 
             try
             {
-                SqlCommand command = new SqlCommand("SELECT de.id, de.nombre, de.correo, di.cod_direccion, di.combre_colonia, de.estado_civil, de.telefono_1, de.telefono_2 " +
-                    " FROM Deudores de JOIN DIrecciones di ON di.cod_direccion = de.cod_deudor", con2);
-                SqlDataReader srd = command.ExecuteReader();
-
-                while (srd.Read())
+                if(txtBuscarCodDeudor.Text == "")
                 {
-                    txtId.Text = srd.GetValue(0).ToString();
-                    txtNombre.Text = srd.GetValue(1).ToString();
-                    txtCorreo.Text = srd.GetValue(2).ToString();
-                    txtCodDireccion.Text = srd.GetValue(3).ToString();
-                    txtColonia.Text = srd.GetValue(4).ToString();
-                    txtEstadoCivil.Text = srd.GetValue(5).ToString();
-                    TxtTelefono1.Text = srd.GetValue(6).ToString();
-                    txtTelefono2.Text = srd.GetValue(7).ToString();
+                    MessageBox.Show("ERROR NO SE PUEDEN DEJAR DATOS EN BLANCO", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    SqlCommand command = new SqlCommand("SELECT de.id, de.nombre, de.correo, di.cod_direccion, di.combre_colonia, de.estado_civil, de.telefono_1, de.telefono_2 " +
+                    " FROM Deudores de JOIN DIrecciones di ON di.cod_direccion = de.cod_deudor", con2);
+                    SqlDataReader srd = command.ExecuteReader();
+
+                    while (srd.Read())
+                    {
+                        txtId.Text = srd.GetValue(0).ToString();
+                        txtNombre.Text = srd.GetValue(1).ToString();
+                        txtCorreo.Text = srd.GetValue(2).ToString();
+                        txtCodDireccion.Text = srd.GetValue(3).ToString();
+                        txtColonia.Text = srd.GetValue(4).ToString();
+                        txtEstadoCivil.Text = srd.GetValue(5).ToString();
+                        TxtTelefono1.Text = srd.GetValue(6).ToString();
+                        txtTelefono2.Text = srd.GetValue(7).ToString();
+                    }
+                }
+                
 
 
             }catch(Exception ex)

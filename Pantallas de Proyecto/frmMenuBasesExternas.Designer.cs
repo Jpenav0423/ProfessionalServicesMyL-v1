@@ -34,7 +34,6 @@ namespace Pantallas_de_Proyecto
             this.btnCancelarYSalir = new System.Windows.Forms.Button();
             this.btnBasesExternas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnListaEmpresasAdmin = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
@@ -94,7 +93,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(577, 119);
+            this.button1.Location = new System.Drawing.Point(593, 119);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 101);
@@ -102,19 +101,6 @@ namespace Pantallas_de_Proyecto
             this.button1.Text = "Lista De Empresas";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(241, 271);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 101);
-            this.button2.TabIndex = 126;
-            this.button2.Text = "Referencias";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -131,7 +117,7 @@ namespace Pantallas_de_Proyecto
             // 
             this.btnListaEmpresasAdmin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnListaEmpresasAdmin.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaEmpresasAdmin.Location = new System.Drawing.Point(577, 271);
+            this.btnListaEmpresasAdmin.Location = new System.Drawing.Point(410, 270);
             this.btnListaEmpresasAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.btnListaEmpresasAdmin.Name = "btnListaEmpresasAdmin";
             this.btnListaEmpresasAdmin.Size = new System.Drawing.Size(194, 101);
@@ -148,7 +134,6 @@ namespace Pantallas_de_Proyecto
             this.ClientSize = new System.Drawing.Size(885, 857);
             this.Controls.Add(this.btnListaEmpresasAdmin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBasesExternas);
             this.Controls.Add(this.groupBox3);
@@ -171,7 +156,6 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.Button btnCancelarYSalir;
         private System.Windows.Forms.Button btnBasesExternas;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnListaEmpresasAdmin;
     }

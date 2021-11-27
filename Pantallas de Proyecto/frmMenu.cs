@@ -38,8 +38,8 @@ namespace Pantallas_de_Proyecto
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            frmReportes frm9 = new frmReportes();
-            frm9.Show();
+            frmSelecionTipoReportes frm8 = new frmSelecionTipoReportes();
+            frm8.Show();
             this.Hide();
 
         }
@@ -53,9 +53,7 @@ namespace Pantallas_de_Proyecto
 
         private void btnAdministrar_Click(object sender, EventArgs e)
         {
-            frmClienteGenral frm5 = new frmClienteGenral();
-            frm5.Show();
-            this.Hide();
+            
         }
 
         private void btnOpciones_Click(object sender, EventArgs e)
@@ -73,13 +71,7 @@ namespace Pantallas_de_Proyecto
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            conexion.abrir();
-            
-            if(conexion.Administrador == 0)
-            {
-                btnAdministrar.Visible = false;
-                btnOpciones.Visible = false;
-            }
+          
             
         }
     }

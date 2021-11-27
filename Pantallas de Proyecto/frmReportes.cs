@@ -20,9 +20,7 @@ namespace Pantallas_de_Proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmSelecionTipoReportes frm8 = new frmSelecionTipoReportes();
-            frm8.Show();
-            this.Hide();
+            
 
             
         }

@@ -56,12 +56,19 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
-                        "FROM Deudores WHERE cod_deudor = '"+txtBuscar.Text+"' ", conexion.sc);
-                    //cmd.ExecuteNonQuery();
-                    dt = new DataTable();
-                    da.Fill(dt);
-                    dgvGestionesDia.DataSource =  dt;
+                    if(txtBuscar.Text == "")
+                    {
+                        MessageBox.Show("Por favor ingrese datos para buscar");
+                    }
+                    else
+                    {
+                        da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                        "FROM Deudores WHERE cod_deudor = '" + txtBuscar.Text + "' ", conexion.sc);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        dgvGestionesDia.DataSource = dt;
+                    }
+                    
 
                 }catch(Exception ex)
                 {
@@ -72,29 +79,50 @@ namespace Pantallas_de_Proyecto
 
             else if(cmbBusqueda.SelectedIndex == 1)
             {
-                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
-                        "FROM Deudores WHERE nombre = '" + txtBuscar.Text + "' ",conexion.sc);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgvGestionesDia.DataSource = dt;
+                if (txtBuscar.Text == "")
+                {
+                    MessageBox.Show("Por favor ingrese datos para buscar");
+                }
+                else
+                {
+                    da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                    "FROM Deudores WHERE cod_deudor = '" + txtBuscar.Text + "' ", conexion.sc);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvGestionesDia.DataSource = dt;
+                }
             }
 
            else if(cmbBusqueda.SelectedIndex == 2)
             {
-                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
-                    "FROM Deudores WHERE ID = '" + txtBuscar.Text + "' ", conexion.sc);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgvGestionesDia.DataSource = dt;
+                if (txtBuscar.Text == "")
+                {
+                    MessageBox.Show("Por favor ingrese datos para buscar");
+                }
+                else
+                {
+                    da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                    "FROM Deudores WHERE cod_deudor = '" + txtBuscar.Text + "' ", conexion.sc);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvGestionesDia.DataSource = dt;
+                }
             }
 
             else
             {
-                da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
-                    "FROM Deudores WHERE telefono_1 = '" + txtBuscar.Text + "' OR telefono_2 = '" + txtBuscar.Text + "' OR  telefono_3 = '" + txtBuscar.Text + "' ", conexion.sc);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgvGestionesDia.DataSource = dt;
+                if (txtBuscar.Text == "")
+                {
+                    MessageBox.Show("Por favor ingrese datos para buscar");
+                }
+                else
+                {
+                    da = new SqlDataAdapter("SELECT cod_deudor, nombre, id , fecha_atraso, capital, saldo_mora, intereses, deuda_total, Descuento " +
+                    "FROM Deudores WHERE cod_deudor = '" + txtBuscar.Text + "' ", conexion.sc);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvGestionesDia.DataSource = dt;
+                }
             }
         }
     }

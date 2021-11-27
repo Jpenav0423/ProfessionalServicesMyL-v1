@@ -70,6 +70,10 @@ namespace Pantallas_de_Proyecto
 
         private void btnAgregarEmpresaA_Click(object sender, EventArgs e)
         {
+            if(txtCodContacto.Text == "" || txtNombreEmpresa.Text == "" || txtTelefono.Text == "" || txtNota.Text == "")
+            {
+                MessageBox.Show("ERROR, NO SE PUEDEN DEJAR DATOS EN BLANCO", "INFORMACION", MessageBoxButtons.OK);
+            }
             try
             {
                 cmd = new SqlCommand("INSERT INTO Contactos (cod_contacto, nombre , telefono, nota ) " +
@@ -109,11 +113,18 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota" +
-                        " FROM Contactos WHERE nombre = '" + txtBuscar.Text + "' ", conexion.sc);
-                    dt = new DataTable();
-                    da.Fill(dt);
-                    dgvListaEmpresA.DataSource = dt;
+                    if (txtBuscar.Text == "")
+                    {
+                        MessageBox.Show("No se puede buscar, datos en blanco ", "ERROR", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota FROM Contactos " +
+                        "WHERE telefono = '" + txtBuscar.Text + "'  ", conexion.sc);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        dgvListaEmpresA.DataSource = dt;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -125,11 +136,19 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota FROM Contactos " +
+                    if(txtBuscar.Text == "")
+                    {
+                        MessageBox.Show("No se puede buscar, datos en blanco ", "ERROR", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota FROM Contactos " +
                         "WHERE telefono = '" + txtBuscar.Text + "'  ", conexion.sc);
-                    dt = new DataTable();
-                    da.Fill(dt);
-                    dgvListaEmpresA.DataSource = dt;
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        dgvListaEmpresA.DataSource = dt;
+                    }
+                    
                 }
                 catch (Exception ex)
                 {

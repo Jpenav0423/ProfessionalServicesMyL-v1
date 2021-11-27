@@ -144,8 +144,7 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                da = new SqlDataAdapter("SELECT se.fecha, ge.fecha_final, se.cod_gestion,se.descripcion, ge.cod_empleado, se.cod_empleado_f " +
-                    "FROM gestiones ge JOIN Seguimiento se ON se.cod_gestion=ge.cod_gestion  WHERE ge.cod_deudor = 1",sc);
+                da = new SqlDataAdapter("SELECT cod_gestion, cod_empleado, cod_deudor, fecha_inicial, fecha_final, promesa_pago, descuento, Observacion FROM Gestiones ",sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;

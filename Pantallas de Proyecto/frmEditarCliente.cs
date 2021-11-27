@@ -71,33 +71,41 @@ namespace Pantallas_de_Proyecto
             con3.Open();
             try
             {
-                SqlCommand command = new SqlCommand("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2, av.cod_aval, av.nom_aval, av.correo , av.telefono  FROM Deudores de INNER JOIN DIrecciones di ON di.cod_direccion = de.direccion INNER JOIN Aval av ON av.cod_aval=de.cod_aval WHERE de.cod_deudor = '" + txtBuscarCodDeudor.Text + "'", con3);
-                SqlDataReader srd = command.ExecuteReader();
-
-                while (srd.Read())
+                if(txtBuscarCodDeudor.Text == " ")
                 {
-                    txtNombre.Text = srd.GetValue(0).ToString();
-                    txtID.Text = srd.GetValue(1).ToString();
-                    txtCorreo.Text = srd.GetValue(2).ToString();
-                    txtCodDireccion.Text = srd.GetValue(3).ToString();
-                    txtColonia.Text = srd.GetValue(4).ToString();
-                    txtTelefono1.Text = srd.GetValue(5).ToString();
-                    txtTelefono2.Text = srd.GetValue(6).ToString();
-                    txtCodigoAval.Text = srd.GetValue(7).ToString();
-                    txtNombreAval.Text = srd.GetValue(8).ToString();
-                    txtCorreoAval.Text = srd.GetValue(9).ToString();
-                    txtTelefonoAval.Text = srd.GetValue(10).ToString();
+                    MessageBox.Show("PORFAVOR INGRESE EL CODIGO DEL DEUDOR ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+                else
+                {
+                    SqlCommand command = new SqlCommand("SELECT de.nombre, de.id, de.correo, di.cod_direccion, di.combre_colonia, de.telefono_1, de.telefono_2, av.cod_aval, av.nom_aval, av.correo , av.telefono  FROM Deudores de INNER JOIN DIrecciones di ON di.cod_direccion = de.direccion INNER JOIN Aval av ON av.cod_aval=de.cod_aval WHERE de.cod_deudor = '" + txtBuscarCodDeudor.Text + "'", con3);
+                    SqlDataReader srd = command.ExecuteReader();
 
-                srd.Close();
+                    while (srd.Read())
+                    {
+                        txtNombre.Text = srd.GetValue(0).ToString();
+                        txtID.Text = srd.GetValue(1).ToString();
+                        txtCorreo.Text = srd.GetValue(2).ToString();
+                        txtCodDireccion.Text = srd.GetValue(3).ToString();
+                        txtColonia.Text = srd.GetValue(4).ToString();
+                        txtTelefono1.Text = srd.GetValue(5).ToString();
+                        txtTelefono2.Text = srd.GetValue(6).ToString();
+                        txtCodigoAval.Text = srd.GetValue(7).ToString();
+                        txtNombreAval.Text = srd.GetValue(8).ToString();
+                        txtCorreoAval.Text = srd.GetValue(9).ToString();
+                        txtTelefonoAval.Text = srd.GetValue(10).ToString();
+                    }
 
 
-                da = new SqlDataAdapter(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
-                    " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '" + txtBuscarCodDeudor.Text + "'  ", conexion.sc);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgvAval.DataSource =  dt;
+                    srd.Close();
+
+
+                    da = new SqlDataAdapter(" SELECT av.cod_aval, av.nom_aval, av.telefono, av.correo, de.cod_deudor, de.nombre " +
+                        " FROM Aval av join Deudores de ON av.cod_aval = de.cod_aval WHERE de.cod_deudor = '" + txtBuscarCodDeudor.Text + "'  ", conexion.sc);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvAval.DataSource = dt;
+                }
+
             }
             catch(Exception ex)
             {

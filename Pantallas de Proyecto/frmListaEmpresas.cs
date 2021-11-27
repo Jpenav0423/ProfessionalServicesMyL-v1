@@ -26,11 +26,18 @@ namespace Pantallas_de_Proyecto
            
            try
             {
-
-                cmd = new SqlCommand("INSERT INTO Contactos (cod_contacto, nombre , telefono, nota ) VALUES ('"+ txtCodContacto.Text +"' , '"+ txtNombreEmpresa.Text +"' , '"+ txtTelefono.Text +"' , '"+ txtNota.Text +"')", conexion.sc);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Se han actualizado los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexion.cargarDatosListaEmpresas(dgvListaEmpresasG);
+                if(txtCodContacto.Text == "" || txtNombreEmpresa.Text == "" || txtNota.Text == "" || txtTelefono.Text == "")
+                {
+                    MessageBox.Show("No se puede dejar datos en blanco ", "ERROR", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    cmd = new SqlCommand("INSERT INTO Contactos (cod_contacto, nombre , telefono, nota ) VALUES ('" + txtCodContacto.Text + "' , '" + txtNombreEmpresa.Text + "' , '" + txtTelefono.Text + "' , '" + txtNota.Text + "')", conexion.sc);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Se han actualizado los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conexion.cargarDatosListaEmpresas(dgvListaEmpresasG);
+                }
+                
             }
             catch(Exception ex)
             {
@@ -72,32 +79,38 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                cmd = new SqlCommand("SELECT * FROM Contactos WHERE cod_contacto = '" + txtCodContacto.Text +"' ", conexion.sc);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
+                if(txtCodContacto.Text == "")
                 {
-                    while (reader.Read())
-                    {
-                        Console.WriteLine(reader.GetValue(0).ToString());
-                        txtNombreEmpresa.Text = reader.GetValue(1).ToString();
-                        txtTelefono.Text = reader.GetValue(2).ToString();
-                        txtNota.Text = reader.GetValue(3).ToString();
-                    }
+                    MessageBox.Show("No se puede dejar datos en blanco ", "ERROR", MessageBoxButtons.OK);
                 }
                 else
                 {
-                    MessageBox.Show("El codigo del empelado no existe", "ERROR");
+                    cmd = new SqlCommand("SELECT * FROM Contactos WHERE cod_contacto = '" + txtCodContacto.Text + "' ", conexion.sc);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine(reader.GetValue(0).ToString());
+                            txtNombreEmpresa.Text = reader.GetValue(1).ToString();
+                            txtTelefono.Text = reader.GetValue(2).ToString();
+                            txtNota.Text = reader.GetValue(3).ToString();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El codigo del empelado no existe", "ERROR");
+                    }
+
+                    reader.Close();
                 }
 
-                reader.Close();
 
             }catch (Exception ex)
             {
                 MessageBox.Show("ERROR NO SE PUEDEN CARGAR LOS DATOS" + ex, "ERROR");
             }
-
-            
 
         }
 
@@ -117,11 +130,19 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota" +
+                    if(txtBuscar.Text == "")
+                    {
+                        MessageBox.Show("No se puede buscar, datos en blanco ", "ERROR", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota" +
                         " FROM Contactos WHERE nombre = '" + txtBuscar.Text + "' ", conexion.sc);
-                    dt = new DataTable();
-                    da.Fill(dt);
-                    dgvListaEmpresasG.DataSource = dt;
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        dgvListaEmpresasG.DataSource = dt;
+                    }
+
                 }
                 catch(Exception ex)
                 {
@@ -133,11 +154,18 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota FROM Contactos " +
-                        "WHERE telefono = '" + txtBuscar.Text  + "'  ", conexion.sc);
-                    dt = new DataTable();
-                    da.Fill(dt);
-                    dgvListaEmpresasG.DataSource = dt;
+                    if (txtBuscar.Text == "")
+                    {
+                        MessageBox.Show("No se puede buscar, datos en blanco ", "ERROR", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        da = new SqlDataAdapter("SELECT cod_contacto, nombre, telefono, nota" +
+                        " FROM Contactos WHERE nombre = '" + txtBuscar.Text + "' ", conexion.sc);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        dgvListaEmpresasG.DataSource = dt;
+                    }
                 }
                 catch(Exception ex)
                 {
