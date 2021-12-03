@@ -90,9 +90,9 @@ namespace Pantallas_de_Proyecto
 
             try
             {
-                if (txtBuscarNombreDeudor.Text == " " || txtCodDeudorBuscar.Text == " ")
+                if (txtBuscarNombreDeudor.Text == "" || txtCodDeudorBuscar.Text == "" || txtBuscarNombreDeudor.Text == " " || txtCodDeudorBuscar.Text == " " || txtBuscarNombreDeudor.Text == "  " || txtCodDeudorBuscar.Text == "  " || txtBuscarNombreDeudor.Text == "   " || txtCodDeudorBuscar.Text == "   ")
                 {
-                    MessageBox.Show("Error no se aceptan datos en blanco");
+                    MessageBox.Show("Error no se aceptan datos en blanco","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
                 else
                 {

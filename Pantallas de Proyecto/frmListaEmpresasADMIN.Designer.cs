@@ -286,7 +286,7 @@ namespace Pantallas_de_Proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(885, 857);
+            this.ClientSize = new System.Drawing.Size(885, 749);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.label5);

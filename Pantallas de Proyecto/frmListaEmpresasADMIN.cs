@@ -36,31 +36,39 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
             conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
+            txtBuscar.Enabled = false;
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             try
             {
-                cmd = new SqlCommand("SELECT * FROM Contactos WHERE cod_contacto = '"+txtCodContacto.Text+"' ", conexion.sc);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
+                if (txtCodContacto.Text == "" || txtCodContacto.Text == " " || txtCodContacto.Text == "  " || txtCodContacto.Text == "   ")
                 {
-                    while (reader.Read())
-                    {
-                        Console.WriteLine(reader.GetValue(0).ToString());
-                        txtNombreEmpresa.Text = reader.GetValue(1).ToString();
-                        txtTelefono.Text = reader.GetValue(2).ToString();
-                        txtNota.Text = reader.GetValue(3).ToString();
-                    }
+                    MessageBox.Show("POR FAVOR INGRESE EL CODIGO DEL CONTACTO PARA BUSCAR", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("El codigo del empleado no exist", "ERROR");
-                }
+                    cmd = new SqlCommand("SELECT * FROM Contactos WHERE cod_contacto = '" + txtCodContacto.Text + "' ", conexion.sc);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                reader.Close();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine(reader.GetValue(0).ToString());
+                            txtNombreEmpresa.Text = reader.GetValue(1).ToString();
+                            txtTelefono.Text = reader.GetValue(2).ToString();
+                            txtNota.Text = reader.GetValue(3).ToString();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El codigo del empleado no exist", "ERROR");
+                    }
+
+                    reader.Close();
+                }
             }
             catch(Exception ex)
             {
@@ -70,33 +78,49 @@ namespace Pantallas_de_Proyecto
 
         private void btnAgregarEmpresaA_Click(object sender, EventArgs e)
         {
-            if(txtCodContacto.Text == "" || txtNombreEmpresa.Text == "" || txtTelefono.Text == "" || txtNota.Text == "")
-            {
-                MessageBox.Show("ERROR, NO SE PUEDEN DEJAR DATOS EN BLANCO", "INFORMACION", MessageBoxButtons.OK);
-            }
+            
             try
             {
-                cmd = new SqlCommand("INSERT INTO Contactos (cod_contacto, nombre , telefono, nota ) " +
+                if (txtCodContacto.Text == "" || txtNombreEmpresa.Text == "" || txtTelefono.Text == "" || txtNota.Text == "")
+                {
+                    MessageBox.Show("ERROR, LLENE TODOS LOS CAMPOS PARA AGREGAR", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    cmd = new SqlCommand("INSERT INTO Contactos (cod_contacto, nombre , telefono, nota ) " +
                     "VALUES ('" + txtCodContacto.Text + "' , '" + txtNombreEmpresa.Text + "' , '" + txtTelefono.Text + "' , '" + txtNota.Text + "')", conexion.sc);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Se han agregado los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Se han agregado los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
+
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
+
             }
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             try
             {
-                cmd = new SqlCommand("UPDATE Contactos SET nombre = '" + txtNombreEmpresa.Text + "' , telefono = '" + txtTelefono.Text + "' , nota = '" + txtNota.Text + "' " +
-                    " WHERE cod_contacto = '"+txtCodContacto.Text+"' ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Se han actualiazdo los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
+                if (txtCodContacto.Text == "" || txtNombreEmpresa.Text == "" || txtTelefono.Text == "" || txtNota.Text == "")
+                {
+                    MessageBox.Show("ERROR, LLENE TODOS LOS CAMPOS PARA MODIFICAR", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    cmd = new SqlCommand("UPDATE Contactos SET nombre = '" + txtNombreEmpresa.Text + "' , telefono = '" + txtTelefono.Text + "' , nota = '" + txtNota.Text + "' " +
+                        " WHERE cod_contacto = '" + txtCodContacto.Text + "' ", conexion.sc);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Se han actualiazdo los Datos con Exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conexion.cargarDatosListaEmpresas(dgvListaEmpresA);
+
+                }
             }
             catch (Exception ex)
             {
@@ -113,7 +137,7 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    if (txtBuscar.Text == "")
+                    if (txtBuscar.Text == "" || txtBuscar.Text == " "|| txtBuscar.Text == "   ")
                     {
                         MessageBox.Show("No se puede buscar, datos en blanco ", "ERROR", MessageBoxButtons.OK);
                     }
@@ -136,7 +160,7 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    if(txtBuscar.Text == "")
+                    if(txtBuscar.Text == "" || txtBuscar.Text == " " || txtBuscar.Text == "   ")
                     {
                         MessageBox.Show("No se puede buscar, datos en blanco ", "ERROR", MessageBoxButtons.OK);
                     }
@@ -159,7 +183,31 @@ namespace Pantallas_de_Proyecto
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            if(txtCodContacto.Text == "" || txtNombreEmpresa.Text == "" || txtTelefono.Text == "" || txtNota.Text == "")
+            {
+                MessageBox.Show("ERROR, NO HAY DATOS QUE LIMPIAR", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                txtCodContacto.Clear();
+                txtNombreEmpresa.Clear();
+                txtTelefono.Clear();
+                txtNota.Clear();
 
+                txtCodContacto.Focus();
+            }
+        }
+
+        private void cmbBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbBuscar.SelectedIndex == -1)
+            {
+                txtBuscar.Enabled = false;
+            }
+            else
+            {
+                txtBuscar.Enabled = true;
+            }
         }
     }
 }

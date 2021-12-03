@@ -62,6 +62,7 @@ namespace Pantallas_de_Proyecto
             this.txtCorreoAval = new System.Windows.Forms.TextBox();
             this.txtTelefonoAval = new System.Windows.Forms.TextBox();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAval)).BeginInit();
@@ -387,12 +388,25 @@ namespace Pantallas_de_Proyecto
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpiar.Location = new System.Drawing.Point(638, 274);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(106, 34);
+            this.btnLimpiar.TabIndex = 123;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(885, 857);
+            this.ClientSize = new System.Drawing.Size(885, 749);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.txtTelefonoAval);
             this.Controls.Add(this.txtCorreoAval);
@@ -470,5 +484,6 @@ namespace Pantallas_de_Proyecto
         private System.Windows.Forms.TextBox txtCorreoAval;
         private System.Windows.Forms.TextBox txtTelefonoAval;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

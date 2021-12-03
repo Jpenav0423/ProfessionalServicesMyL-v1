@@ -34,7 +34,7 @@ namespace Pantallas_de_Proyecto
             {
                 if(txtCodEmpleado.Text == "" || txtContraseña.Text == "" || txtEstado.Text == "" || txtUsuario.Text == "")
                 {
-                    MessageBox.Show("ERROR, NO SE PUEDEN DEJAR DATOS EN BLANCO", "INFORMACION", MessageBoxButtons.OK);
+                    MessageBox.Show("ERROR, LLENE TODOS LOS CAMPOS PARA AGREGAR", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -55,9 +55,17 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                cmd = new SqlCommand("UPDATE Usuario set nivel = '" + cmbNivelUser.Text + "', usuario = '" + txtUsuario.Text + "' , contra = '" + txtContraseña.Text + "' , estado = '" + txtEstado.Text + "' WHERE cod_empleado = "+txtCodEmpleado.Text+" ", conexion.sc);
-                cmd.ExecuteNonQuery();
-                conexion.CargarDatosUsuarios(dgvListaUsuarios);
+                if (txtCodEmpleado.Text == "" || txtContraseña.Text == "" || txtUsuario.Text == "" || txtEstado.Text == "")
+                {
+                    MessageBox.Show("ERROR, LLENE TODOS LOS CAMPOS PARA MODIFICAR", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    cmd = new SqlCommand("UPDATE Usuario set nivel = '" + cmbNivelUser.Text + "', usuario = '" + txtUsuario.Text + "' , contra = '" + txtContraseña.Text + "' , estado = '" + txtEstado.Text + "' WHERE cod_empleado = " + txtCodEmpleado.Text + " ", conexion.sc);
+                    cmd.ExecuteNonQuery();
+                    conexion.CargarDatosUsuarios(dgvListaUsuarios);
+                }
 
             }catch(Exception ex)
             {
@@ -69,7 +77,7 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
             conexion.CargarDatosUsuarios(dgvListaUsuarios);
-            //this.reportViewer1.RefreshReport();
+            
         }
 
         private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -81,9 +89,9 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                if(txtCodEmpleado.Text == "")
+                if(txtCodEmpleado.Text == "" || txtCodEmpleado.Text == " " || txtCodEmpleado.Text == "  " || txtCodEmpleado.Text == "   ")
                 {
-                    MessageBox.Show("NO PUEDE DEJAR DATOS EN BLANCO","INFORMACION", MessageBoxButtons.OK);
+                    MessageBox.Show("INGRESE EL CODIGO DEL EMPLEADO PARA MOSTRAR","ERROR", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -119,14 +127,21 @@ namespace Pantallas_de_Proyecto
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtCodEmpleado.Clear();
-            txtUsuario.Clear();
-            txtContraseña.Clear();
-            txtEstado.Clear();
+            if (txtContraseña.Text == "" || txtCodEmpleado.Text == "" || txtUsuario.Text == "" || txtEstado.Text == "")
+            {
+                MessageBox.Show("NO HAY DATOS QUE BORRAR", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                txtCodEmpleado.Clear();
+                txtUsuario.Clear();
+                txtContraseña.Clear();
+                txtEstado.Clear();
 
-            cmbNivelUser.SelectedIndex = -1;
+                cmbNivelUser.SelectedIndex = -1;
 
-            txtCodEmpleado.Focus();
+                txtCodEmpleado.Focus();
+            }
         }
     }
 }

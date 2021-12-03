@@ -28,21 +28,30 @@ namespace Pantallas_de_Proyecto
         {
             try
             {
-                cmd = new SqlCommand("UPDATE Deudores SET nombre = '" + txtNombre.Text + "' , id = '" + txtID.Text + "' " +
-                    " ,  telefono_1 = '" + txtTelefono1.Text + "' , telefono_2 = '" + txtTelefono2.Text + "' , correo = '" + txtCorreo.Text + "' " +
-                    " WHERE cod_deudor =  " + txtBuscarCodDeudor.Text + " ", conexion.sc);
-                cmd.ExecuteNonQuery();
+                if (txtBuscarCodDeudor.Text == "" || txtNombre.Text == "" || txtID.Text == "" || txtCorreo.Text == "" || txtCodDireccion.Text == "" || txtColonia.Text == "" || txtTelefono1.Text == "" || txtTelefono2.Text == "" || txtCodigoAval.Text == "" || txtNombreAval.Text == "" || txtCorreoAval.Text == "" || txtTelefonoAval.Text == "")
+                {
+                    MessageBox.Show("NO SE PUEDEN MODIFICAR DATOS EN BLANCO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
 
 
-                cmd = new SqlCommand("UPDATE DIrecciones SET combre_colonia = '" + txtColonia.Text + "' WHERE cod_direccion = " + txtCodDireccion.Text + " ", conexion.sc);
-                cmd.ExecuteNonQuery();
-              
-                cmd = new SqlCommand("UPDATE AVAL SET nom_aval = '" + txtNombreAval.Text + "' , telefono = '" + txtTelefonoAval.Text + "' , correo = '" + txtCorreoAval.Text + "' WHERE cod_aval = '" + txtCodigoAval.Text + "' ", conexion.sc);
-                
-                 cmd.ExecuteNonQuery();
-                 MessageBox.Show("Se han actualizado los datos de manera Exitosa", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 conexion.cargarDatosReferecnias(dgvAval);
-                
+                    cmd = new SqlCommand("UPDATE Deudores SET nombre = '" + txtNombre.Text + "' , id = '" + txtID.Text + "' " +
+                        " ,  telefono_1 = '" + txtTelefono1.Text + "' , telefono_2 = '" + txtTelefono2.Text + "' , correo = '" + txtCorreo.Text + "' " +
+                        " WHERE cod_deudor =  " + txtBuscarCodDeudor.Text + " ", conexion.sc);
+                    cmd.ExecuteNonQuery();
+
+
+                    cmd = new SqlCommand("UPDATE DIrecciones SET combre_colonia = '" + txtColonia.Text + "' WHERE cod_direccion = " + txtCodDireccion.Text + " ", conexion.sc);
+                    cmd.ExecuteNonQuery();
+
+                    cmd = new SqlCommand("UPDATE AVAL SET nom_aval = '" + txtNombreAval.Text + "' , telefono = '" + txtTelefonoAval.Text + "' , correo = '" + txtCorreoAval.Text + "' WHERE cod_aval = '" + txtCodigoAval.Text + "' ", conexion.sc);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Se han actualizado los datos de manera Exitosa", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conexion.cargarDatosReferecnias(dgvAval);
+
+                }
                 
             }
             catch(Exception ex)
@@ -71,7 +80,7 @@ namespace Pantallas_de_Proyecto
             con3.Open();
             try
             {
-                if(txtBuscarCodDeudor.Text == " ")
+                if(txtBuscarCodDeudor.Text == "" || txtBuscarCodDeudor.Text == " " || txtBuscarCodDeudor.Text == " " || txtBuscarCodDeudor.Text == "  " || txtBuscarCodDeudor.Text == "   "  )
                 {
                     MessageBox.Show("PORFAVOR INGRESE EL CODIGO DEL DEUDOR ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -118,6 +127,30 @@ namespace Pantallas_de_Proyecto
         private void frmEditarCliente_Load(object sender, EventArgs e)
         {
             conexion.abrir();
+            txtBuscarCodDeudor.Focus();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            if(txtBuscarCodDeudor.Text == "" || txtBuscarCodDeudor.Text == " " || txtBuscarCodDeudor.Text == " " || txtBuscarCodDeudor.Text == "  " || txtBuscarCodDeudor.Text == "")
+            {
+                MessageBox.Show("NO HAY DATOS PARA LIMPIAR ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                txtBuscarCodDeudor.Clear();
+                txtNombre.Clear();
+                txtCorreo.Clear();
+                txtColonia.Clear();
+                txtTelefono1.Clear();
+                txtTelefono2.Clear();
+                txtCodigoAval.Clear();
+                txtNombreAval.Clear();
+                txtCorreoAval.Clear();
+                txtTelefonoAval.Clear();
+
+                txtBuscarCodDeudor.Focus();
+            }
         }
     }
 }

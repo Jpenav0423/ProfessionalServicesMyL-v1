@@ -49,21 +49,6 @@ namespace Pantallas_de_Proyecto
                     " FROM Deudores de JOIN DIrecciones di ON di.cod_direccion = de.cod_deudor", con2);
                     SqlDataReader srd = command.ExecuteReader();
 
-                    while (srd.Read())
-                    {
-                        txtId.Text = srd.GetValue(0).ToString();
-                        txtNombre.Text = srd.GetValue(1).ToString();
-                        txtCorreo.Text = srd.GetValue(2).ToString();
-                        txtCodDireccion.Text = srd.GetValue(3).ToString();
-                        txtColonia.Text = srd.GetValue(4).ToString();
-                        txtEstadoCivil.Text = srd.GetValue(5).ToString();
-                        TxtTelefono1.Text = srd.GetValue(6).ToString();
-                        txtTelefono2.Text = srd.GetValue(7).ToString();
-                    }
-                
-                
-
-
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
