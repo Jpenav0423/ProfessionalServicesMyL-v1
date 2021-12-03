@@ -47,10 +47,9 @@ namespace Pantallas_de_Proyecto
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(227, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(340, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Busqueda por:";
             // 
@@ -62,21 +61,20 @@ namespace Pantallas_de_Proyecto
             "Nombre",
             "Identidad",
             "Telefono"});
-            this.cmbBusqueda.Location = new System.Drawing.Point(308, 85);
-            this.cmbBusqueda.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbBusqueda.Location = new System.Drawing.Point(462, 131);
             this.cmbBusqueda.Name = "cmbBusqueda";
-            this.cmbBusqueda.Size = new System.Drawing.Size(161, 21);
+            this.cmbBusqueda.Size = new System.Drawing.Size(240, 28);
             this.cmbBusqueda.TabIndex = 1;
+            this.cmbBusqueda.SelectedIndexChanged += new System.EventHandler(this.cmbBusqueda_SelectedIndexChanged);
             // 
             // dgvGestionesDia
             // 
             this.dgvGestionesDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGestionesDia.Location = new System.Drawing.Point(230, 138);
-            this.dgvGestionesDia.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvGestionesDia.Location = new System.Drawing.Point(345, 212);
             this.dgvGestionesDia.Name = "dgvGestionesDia";
             this.dgvGestionesDia.RowHeadersWidth = 51;
             this.dgvGestionesDia.RowTemplate.Height = 24;
-            this.dgvGestionesDia.Size = new System.Drawing.Size(597, 438);
+            this.dgvGestionesDia.Size = new System.Drawing.Size(896, 674);
             this.dgvGestionesDia.TabIndex = 4;
             // 
             // groupBox3
@@ -86,21 +84,18 @@ namespace Pantallas_de_Proyecto
             this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.btnCancelar);
             this.groupBox3.Controls.Add(this.btnBuscar);
-            this.groupBox3.Location = new System.Drawing.Point(2, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(3, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(196, 722);
+            this.groupBox3.Size = new System.Drawing.Size(294, 1111);
             this.groupBox3.TabIndex = 120;
             this.groupBox3.TabStop = false;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(41, 291);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(62, 448);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 84);
+            this.button1.Size = new System.Drawing.Size(168, 129);
             this.button1.TabIndex = 5;
             this.button1.Text = "Iniciar Gestion";
             this.button1.UseVisualStyleBackColor = false;
@@ -109,10 +104,9 @@ namespace Pantallas_de_Proyecto
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(237, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -120,10 +114,9 @@ namespace Pantallas_de_Proyecto
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCancelar.Location = new System.Drawing.Point(34, 492);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(51, 757);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(112, 84);
+            this.btnCancelar.Size = new System.Drawing.Size(168, 129);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -132,10 +125,9 @@ namespace Pantallas_de_Proyecto
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBuscar.Location = new System.Drawing.Point(41, 159);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(62, 245);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 84);
+            this.btnBuscar.Size = new System.Drawing.Size(168, 129);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -145,33 +137,32 @@ namespace Pantallas_de_Proyecto
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Wide Latin", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(226, 27);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(339, 42);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(325, 18);
+            this.label6.Size = new System.Drawing.Size(479, 26);
             this.label6.TabIndex = 121;
             this.label6.Text = "Buscar Gestiones del Dia";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(502, 86);
+            this.txtBuscar.Location = new System.Drawing.Point(753, 132);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(165, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(246, 26);
             this.txtBuscar.TabIndex = 122;
             // 
             // frmGestionesDia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(885, 857);
+            this.ClientSize = new System.Drawing.Size(1328, 1050);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvGestionesDia);
             this.Controls.Add(this.cmbBusqueda);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGestionesDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Gestiones del Dia ";

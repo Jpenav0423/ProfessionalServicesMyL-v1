@@ -26,7 +26,9 @@ namespace Pantallas_de_Proyecto
         private void Form16_Load(object sender, EventArgs e)
         {
             conexion.abrir();
-             conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+            conexion.mostrarDatosGestionesDia(dgvGestionesDia);
+
+            txtBuscar.Enabled = false;
   
         }
 
@@ -56,8 +58,9 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    if(txtBuscar.Text == "")
+                    if (txtBuscar.Text == "" || txtBuscar.Text == " " || txtBuscar.Text == "   ") 
                     {
+                       
                         MessageBox.Show("Por favor ingrese datos para buscar");
                     }
                     else
@@ -79,7 +82,7 @@ namespace Pantallas_de_Proyecto
 
             else if(cmbBusqueda.SelectedIndex == 1)
             {
-                if (txtBuscar.Text == "")
+                if (txtBuscar.Text == "" || txtBuscar.Text == " " || txtBuscar.Text == "   ")
                 {
                     MessageBox.Show("Por favor ingrese datos para buscar");
                 }
@@ -95,7 +98,7 @@ namespace Pantallas_de_Proyecto
 
            else if(cmbBusqueda.SelectedIndex == 2)
             {
-                if (txtBuscar.Text == "")
+                if (txtBuscar.Text == "" || txtBuscar.Text == " " || txtBuscar.Text == "   ")
                 {
                     MessageBox.Show("Por favor ingrese datos para buscar");
                 }
@@ -111,7 +114,7 @@ namespace Pantallas_de_Proyecto
 
             else
             {
-                if (txtBuscar.Text == "")
+                if (txtBuscar.Text == "" || txtBuscar.Text == " " || txtBuscar.Text == "   ")
                 {
                     MessageBox.Show("Por favor ingrese datos para buscar");
                 }
@@ -123,6 +126,18 @@ namespace Pantallas_de_Proyecto
                     da.Fill(dt);
                     dgvGestionesDia.DataSource = dt;
                 }
+            }
+        }
+
+        private void cmbBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbBusqueda.SelectedIndex == -1)
+            { 
+                txtBuscar.Enabled = false;
+                    
+            }else
+            {
+                txtBuscar.Enabled = true;
             }
         }
     }

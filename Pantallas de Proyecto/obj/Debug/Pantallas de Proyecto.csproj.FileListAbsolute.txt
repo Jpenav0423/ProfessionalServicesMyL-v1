@@ -96,7 +96,6 @@ C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmMenuBasesE
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNombreCliente.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListaEmpresas.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmTipoReporte.resources
-C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmBusquedaDeudor.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmCaracterizacion.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmGestionesDia.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListasUsuarios.resources

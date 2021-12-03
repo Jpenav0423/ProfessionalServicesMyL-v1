@@ -46,8 +46,8 @@ namespace Pantallas_de_Proyecto
                 }
                 else
                 {
-                    cmd = new SqlCommand("INSERT INTO Gestiones (cod_gestion, cod_empleado, cod_deudor, Observacion, caracter_1, caracter_2, caracter_3, promesa_pago, descuento, fecha_inicial, fecha_final) " +
-                        " VALUES ('"+txtCodGestion.Text+"' , '"+txtCodEmpleado.Text+"' , '"+txtCodDeudor.Text+"', '"+txtDescripcion.Text+"' , '"+cmbCarac1.Text+"' , '"+cmbCarac2.Text+"', '"+cmbCarac3.Text+"', '"+txtValorPromesa.Text+"', " +txtDescuento.Text+ ", '"+txtFechaInicial.Text+"', '"+txtFechaFinal.Text+"') ", conexion.sc);
+                    cmd = new SqlCommand("INSERT INTO Gestiones (cod_gestion, cod_empleado, cod_deudor, Observacion, caracter_1, caracter_2, caracter_3, promesa_pago, fecha_inicial, fecha_final , descuento) " +
+                        " VALUES ('"+txtCodGestion.Text+"' , '"+txtCodEmpleado.Text+"' , '"+txtCodDeudor.Text+"', '"+txtDescripcion.Text+"' , '"+cmbCarac1.Text+"' , '"+cmbCarac2.Text+"', '"+cmbCarac3.Text+"', '"+txtValorPromesa.Text+"', '"+txtFechaInicial.Text+"', '"+txtFechaFinal.Text+ "' , '" + txtDescuento.Text + "') ", conexion.sc);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Se han ingresado los datos con exito", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -35,7 +35,7 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    if(txtBuscar.Text == "")
+                    if(txtBuscar.Text == "" || txtBuscar.Text == " " || txtBuscar.Text == "  " || txtBuscar.Text == "   ")
                     {
                         MessageBox.Show("Por favor ingrese un dato para buscar");
                     }
@@ -59,7 +59,7 @@ namespace Pantallas_de_Proyecto
             {
                 try
                 {
-                    if (txtBuscar.Text == "")
+                    if (txtBuscar.Text == "" || txtBuscar.Text == " " || txtBuscar.Text == "  " || txtBuscar.Text == "   ")
                     {
                         MessageBox.Show("Por favor ingrese un dato para buscar");
                     }
@@ -84,6 +84,20 @@ namespace Pantallas_de_Proyecto
         {
             conexion.abrir();
             conexion.CargarDatosSeguroSocial(dgvSeguroSocial);
+
+            txtBuscar.Enabled = false;
+        }
+
+        private void cmbBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbBuscar.SelectedIndex == -1)
+            {
+                txtBuscar.Enabled = false;
+            }
+            else
+            {
+                txtBuscar.Enabled = true;
+            }
         }
     }
 }

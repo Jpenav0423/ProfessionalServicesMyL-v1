@@ -49,20 +49,18 @@ namespace Pantallas_de_Proyecto
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(20, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.Size = new System.Drawing.Size(162, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Criterio de Busqueda:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(231, 49);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(346, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(119, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ingresar Datos:";
             // 
@@ -72,27 +70,25 @@ namespace Pantallas_de_Proyecto
             this.cmbBuscar.Items.AddRange(new object[] {
             "Nombre",
             "Identidad"});
-            this.cmbBuscar.Location = new System.Drawing.Point(126, 44);
-            this.cmbBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbBuscar.Location = new System.Drawing.Point(189, 68);
             this.cmbBuscar.Name = "cmbBuscar";
-            this.cmbBuscar.Size = new System.Drawing.Size(92, 21);
+            this.cmbBuscar.Size = new System.Drawing.Size(136, 28);
             this.cmbBuscar.TabIndex = 4;
+            this.cmbBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbBuscar_SelectedIndexChanged);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(335, 49);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Location = new System.Drawing.Point(502, 75);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(232, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(346, 26);
             this.txtBuscar.TabIndex = 5;
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBuscar.Location = new System.Drawing.Point(42, 155);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(63, 238);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 84);
+            this.btnBuscar.Size = new System.Drawing.Size(168, 129);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -101,22 +97,20 @@ namespace Pantallas_de_Proyecto
             // dgvSeguroSocial
             // 
             this.dgvSeguroSocial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSeguroSocial.Location = new System.Drawing.Point(241, 222);
-            this.dgvSeguroSocial.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSeguroSocial.Location = new System.Drawing.Point(362, 342);
             this.dgvSeguroSocial.Name = "dgvSeguroSocial";
             this.dgvSeguroSocial.RowHeadersWidth = 51;
             this.dgvSeguroSocial.RowTemplate.Height = 24;
-            this.dgvSeguroSocial.Size = new System.Drawing.Size(608, 374);
+            this.dgvSeguroSocial.Size = new System.Drawing.Size(912, 575);
             this.dgvSeguroSocial.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Wide Latin", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(237, 32);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(356, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(403, 18);
+            this.label4.Size = new System.Drawing.Size(588, 26);
             this.label4.TabIndex = 99;
             this.label4.Text = "Buscar Lista del Seguro Social:";
             // 
@@ -126,21 +120,18 @@ namespace Pantallas_de_Proyecto
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.btnSalir);
             this.groupBox2.Controls.Add(this.btnBuscar);
-            this.groupBox2.Location = new System.Drawing.Point(2, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(196, 722);
+            this.groupBox2.Size = new System.Drawing.Size(294, 1111);
             this.groupBox2.TabIndex = 115;
             this.groupBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pantallas_de_Proyecto.Properties.Resources.logo_3__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(237, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -148,10 +139,9 @@ namespace Pantallas_de_Proyecto
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSalir.Location = new System.Drawing.Point(42, 459);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(63, 706);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 84);
+            this.btnSalir.Size = new System.Drawing.Size(168, 129);
             this.btnSalir.TabIndex = 100;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -163,24 +153,25 @@ namespace Pantallas_de_Proyecto
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtBuscar);
-            this.groupBox1.Location = new System.Drawing.Point(251, 92);
+            this.groupBox1.Location = new System.Drawing.Point(376, 142);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(580, 104);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(870, 160);
             this.groupBox1.TabIndex = 116;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
             // frmNombreCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(885, 857);
+            this.ClientSize = new System.Drawing.Size(1328, 1122);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvSeguroSocial);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNombreCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seguro Social";

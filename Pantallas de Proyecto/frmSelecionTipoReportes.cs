@@ -49,14 +49,16 @@ namespace Pantallas_de_Proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmReportes frm9 = new frmReportes();
-            frm9.Show();
+            frmMenu menu = new frmMenu();
+            menu.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
         }
 
         private void rdbRequerimientolegal2_CheckedChanged(object sender, EventArgs e)
