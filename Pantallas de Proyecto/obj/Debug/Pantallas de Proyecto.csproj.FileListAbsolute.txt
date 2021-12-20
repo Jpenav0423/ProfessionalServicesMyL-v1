@@ -36,7 +36,6 @@ C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNombreCliente.resources
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListaEmpresas.resources
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmTipoReporte.resources
-C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmBusquedaDeudor.resources
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmCaracterizacion.resources
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmGestionesDia.resources
 C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmListasUsuarios.resources
@@ -242,3 +241,4 @@ C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmAvisodeEmbargo.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNotificacion1.resources
 C:\repos-git\Pantallas de Proyecto\obj\Debug\Pantallas_de_Proyecto.frmNotificacion2.resources
+C:\Users\Home\Documents\GitHub\ProfessionalServicesMyL\Pantallas de Proyecto\obj\Debug\Pantallas de Proyecto.csproj.CopyComplete

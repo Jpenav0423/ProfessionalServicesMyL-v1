@@ -141,5 +141,10 @@ namespace Pantallas_de_Proyecto
         {
 
         }
+
+        private void txtCodDeudorBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

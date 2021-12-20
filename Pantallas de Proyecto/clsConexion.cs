@@ -16,7 +16,7 @@ namespace Pantallas_de_Proyecto
         
 
         //Conexion a la base de datos
-        string conexion = "Data Source=DESKTOP-6PP0TCF;Initial Catalog=Prueba_MyL2;Integrated Security=true;";
+        string conexion = "Data Source=DESKTOP-L6PQCB1;Initial Catalog=Prueba_MyL2;Integrated Security=true;";
 
         public SqlConnection sc = new SqlConnection();
 
